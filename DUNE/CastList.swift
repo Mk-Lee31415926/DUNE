@@ -209,26 +209,31 @@ struct CastList: View{
     var body: some View{
         NavigationView {
                 
-            List{
-                ForEach(actors){ actor in
-                    
-                    // link no effect..
-                    NavigationLink(
-                        destination: ActorDetail(actor: actor),
-                        label: {
-                            CastRow(actor: actor)
-                        }
-                    )
+            ZStack {
+                Image("CastView_bg")
+                    .resizable()
+                    .scaledToFill()
+                List{
+                    ForEach(actors){ actor in
+                        //I want to call each tab detail respectively here,
+                        //not click on entire row
+                        NavigationLink(
+                            destination: ActorDetail(actor: actor),
+                            label: {
+                                CastRow(actor: actor)
+                            }
+                        )
+                    }
                 }
             }
             .navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
             .toolbar{
                 ToolbarItem(placement: .principal){
-                    VStack {
-                        Text("Top Cast").font(.headline)
+                        VStack {
+                            Text("Top Cast").font(.headline)
+                        }
                     }
                 }
-            }
         }
     }
 }

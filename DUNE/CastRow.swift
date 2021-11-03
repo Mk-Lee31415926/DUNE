@@ -15,9 +15,9 @@ struct CastRow: View{
             //Round Cast Image :(Use cast_name to pull image from assets)
             Image(actor.cast_name)
                 .resizable()
-                .clipShape(Circle())
+                .clipShape(Capsule())
                 .scaledToFit()
-                .frame(width: 200, height: 200)
+                .frame(width: 200, height: 250)
                 .shadow(color: .orange, radius: 10)
                 .padding(.leading,5)
             //missing part

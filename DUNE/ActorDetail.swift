@@ -8,37 +8,46 @@
 import Foundation
 import SwiftUI
 struct ActorDetail: View{
+    //design as option, to output cast or actor detail
+    //can it be reused?
+    //let callDetail: String
     let actor: Actor
+    
     var body: some View{
-        
-        //make horizontal scroll
-        ScrollView(.horizontal, showsIndicators: true){
-            HStack {
-                    //character page
-                ScrollView {
-                    VStack{
-                            //cast pic
-                            ImageSetView(who: actor.cast_name,
-                                         width: 300)
-                            //cast bio
-                            TextSetView(who: actor.cast_bio,
-                                        width:300)
-
-                    }
+        //actor page
+        TabView{
+            ScrollView {
+                VStack {
+                    TitleSetView(typein: "Cast Intro")
+                    //actor pic
+                    ImageSetView(who: actor.cast_name,
+                                 width: 300)
+                    //actor bio
+                    TextSetView(who: actor.cast_bio,
+                                width: 300)
                 }
-                    //actor page
-                ScrollView {
-                    VStack {
-                            //actor pic
-                            ImageSetView(who: actor.name,
-                                         width: 300)
-                            //actor bio
-                            TextSetView(who: actor.actor_bio,
-                                        width: 300)
-                    }
+            }
+//            .tabItem {
+//                Label("Cast",systemImage:"mustache")
+//
+//            }
+            ScrollView {
+                VStack {
+                    TitleSetView(typein: "Actor Bio")
+                    //actor pic
+                    ImageSetView(who: actor.name,
+                                 width: 300)
+                    //actor bio
+                    TextSetView(who: actor.actor_bio,
+                                width: 300)
                 }
-                }
+            }
+//            .tabItem {
+//                Label("Actor",systemImage:"person.fill.viewfinder")\
+//            }
+            
         }
+        .tabViewStyle(PageTabViewStyle())
         
     }
 }
@@ -71,5 +80,14 @@ struct TextSetView: View {
             .padding()
             .background(Color(red: 1.0, green: 237/255, blue:166/255, opacity: 1.0))
             .cornerRadius(30)
+    }
+}
+
+struct TitleSetView: View {
+    let typein: String
+    var body: some View {
+        Text(typein)
+            //.font(.custom("ROCKETWILDNESS",size: 30))
+//            .background(LinearGradient(gradient: Gradient(colors: [Color.orange, Color.white]), startPoint: /*@START_MENU_TOKEN@*/.topLeading/*@END_MENU_TOKEN@*/, endPoint: .bottomTrailing))
     }
 }
