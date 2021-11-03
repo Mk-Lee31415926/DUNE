@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var shoWhich: Int = 0
+    
     var body: some View {
         TabView{
             //Main tab 
@@ -41,7 +42,7 @@ struct ContentView: View {
             }
             
             //2nd Tab
-            GiveMe(name:"Avenger\(shoWhich)")
+            GiveMe(name:actors[shoWhich])
             .onTapGesture {
                 shoWhich = Int.random(in: 0...11)
             }

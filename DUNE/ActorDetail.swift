@@ -18,7 +18,8 @@ struct ActorDetail: View{
         TabView{
             ScrollView {
                 VStack {
-                    TitleSetView(typein: "Cast Intro")
+                    Text("Cast Intro")
+                    //TitleSetView(typein: "Cast Intro")
                     //actor pic
                     ImageSetView(who: actor.cast_name,
                                  width: 300)
@@ -33,7 +34,8 @@ struct ActorDetail: View{
 //            }
             ScrollView {
                 VStack {
-                    TitleSetView(typein: "Actor Bio")
+                    Text("Actor Bio")
+                    //TitleSetView(typein: "Actor Bio")
                     //actor pic
                     ImageSetView(who: actor.name,
                                  width: 300)
@@ -48,6 +50,7 @@ struct ActorDetail: View{
             
         }
         .tabViewStyle(PageTabViewStyle())
+        //adjust display  ( cant see dot in bright setting
         
     }
 }
@@ -83,11 +86,13 @@ struct TextSetView: View {
     }
 }
 
-struct TitleSetView: View {
-    let typein: String
-    var body: some View {
-        Text(typein)
-            //.font(.custom("ROCKETWILDNESS",size: 30))
-//            .background(LinearGradient(gradient: Gradient(colors: [Color.orange, Color.white]), startPoint: /*@START_MENU_TOKEN@*/.topLeading/*@END_MENU_TOKEN@*/, endPoint: .bottomTrailing))
-    }
-}
+
+//weird, this part cause bug. ??
+//struct TitleSetView: View {
+//    let typein: String
+//    var body: some View {
+//        Text(typein)
+//            //.font(.custom("ROCKETWILDNESS",size: 30))
+////            .background(LinearGradient(gradient: Gradient(colors: [Color.orange, Color.white]), startPoint: /*@START_MENU_TOKEN@*/.topLeading/*@END_MENU_TOKEN@*/, endPoint: .bottomTrailing))
+//    }
+//}
