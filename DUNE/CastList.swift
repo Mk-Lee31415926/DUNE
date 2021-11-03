@@ -208,6 +208,7 @@ struct CastList: View{
     
     var body: some View{
         NavigationView {
+                
             List{
                 ForEach(actors){ actor in
                     
@@ -220,7 +221,14 @@ struct CastList: View{
                     )
                 }
             }
-            .navigationTitle("Cast intro")
+            .navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
+            .toolbar{
+                ToolbarItem(placement: .principal){
+                    VStack {
+                        Text("Top Cast").font(.headline)
+                    }
+                }
+            }
         }
     }
 }

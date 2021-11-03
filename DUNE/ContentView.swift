@@ -14,9 +14,15 @@ struct ContentView: View {
             //Main tab 
             ZStack {
                 //Cover photo
-                Image("MainPageCover")
-                    .resizable()
-                    .scaledToFit()
+//                Image("MainPageCover")
+//                    .resizable()
+//                    .scaledToFit()
+                Text(
+                    """
+                    The spice extends LIFE.
+                    Test PHW
+                    """)
+                    .font(.custom("ROCKETWILDNESS",size: 30))
             }
             .tabItem {
                     Label("Main()",systemImage:"house.circle")

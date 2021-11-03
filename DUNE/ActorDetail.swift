@@ -15,15 +15,17 @@ struct ActorDetail: View{
         ScrollView(.horizontal, showsIndicators: true){
             HStack {
                     //character page
+                ScrollView {
                     VStack{
-                        //cast pic
-                        ImageSetView(who: actor.cast_name,
-                                     width: 300)
-                        //cast bio
-                        TextSetView(who: actor.cast_bio,
-                                    width:300)
+                            //cast pic
+                            ImageSetView(who: actor.cast_name,
+                                         width: 300)
+                            //cast bio
+                            TextSetView(who: actor.cast_bio,
+                                        width:300)
 
                     }
+                }
                     //actor page
                 ScrollView {
                     VStack {
