@@ -13,16 +13,17 @@ struct ContentView: View {
         TabView{
             //Main tab 
             ZStack {
-                //Cover photo
+                //Cover photo 要換
 //                Image("MainPageCover")
 //                    .resizable()
 //                    .scaledToFit()
-                Text(
-                    """
-                    The spice extends LIFE.
-                    Test PHW
-                    """)
-                    .font(.custom("ROCKETWILDNESS",size: 30))
+//                    .opacity(0.5)
+                Text("The spice extends LIFE. The spice expands consciousness. The spice is vital to space travel. He who controls the spice controls the universe. Fear is the mind-killer. A beginning is a very delicate time. It is by will alone I set my mind in motion. The mystery of life isn't a problem to solve, but a reality to experience. The sleeper must awaken."
+                )
+                .font(.custom("ROCKETWILDNESS",size: 30))
+                .fontWeight(.heavy)
+                //.multilineTextAlignment(.trailing)
+                .clipShape(Rectangle())
             }
             .tabItem {
                     Label("Main()",systemImage:"house.circle")
