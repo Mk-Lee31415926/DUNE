@@ -23,18 +23,18 @@ struct IntroView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 50, height: 50, alignment: .center)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.orange)
                                 .font(.system(size: 100, weight: .bold, design: .serif))
                             
                             Text("Dive in")
-                                .foregroundColor(.white)
-                                .bold()
-                                .font(.title2)
-                                .italic()
+                                .font(.custom("ROCKETWILDNESS",size: 50))
+                                .foregroundColor(.orange)
                         }
-                    })
+                    }
+                )
                 
             }
+            .background(Color("ConceptColor03"))  // wont work?
             .navigationTitle("Welcome To DUNE")
             .navigationBarTitleDisplayMode(.inline)
         }

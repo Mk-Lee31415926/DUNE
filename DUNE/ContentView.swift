@@ -4,27 +4,29 @@
 //
 //  Created by User03 on 2021/10/27.
 //
-
+import AVKit
 import SwiftUI
 
 struct ContentView: View {
     @State private var shoWhich: Int = 0
-    
+    //引入mp4檔會導致preview掛掉
+    //let videoUrl = URL(fileURLWithPath: Bundle.main.path(forResource: "mainPgMotion", ofType: "mp4")!)
     var body: some View {
         TabView{
             //Main tab 
             ZStack {
                 //Cover photo 要換
-//                Image("MainPageCover")
-//                    .resizable()
-//                    .scaledToFit()
-//                    .opacity(0.5)
-                Text("The spice extends LIFE. The spice expands consciousness. The spice is vital to space travel. He who controls the spice controls the universe. Fear is the mind-killer. A beginning is a very delicate time. It is by will alone I set my mind in motion. The mystery of life isn't a problem to solve, but a reality to experience. The sleeper must awaken."
-                )
+                Text("TEXT")
                 .font(.custom("ROCKETWILDNESS",size: 30))
                 .fontWeight(.heavy)
-                //.multilineTextAlignment(.trailing)
-                .clipShape(Rectangle())
+                .background(Image("DUNEmainPgCover")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 400, height: 400, alignment: .center)
+                )
+
+//                VideoPlayer(player: AVPlayer(url: videoUrl))
+//                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
             }
             .tabItem {
                     Label("Main()",systemImage:"house.circle")
@@ -42,7 +44,10 @@ struct ContentView: View {
             }
             
             //2nd Tab
-            GiveMe(name:actors[shoWhich])
+            //which role do you play in this world?
+            //character random
+            //how to get actors to this page??
+            GiveMe(name:"Avenger\(shoWhich)")
             .onTapGesture {
                 shoWhich = Int.random(in: 0...11)
             }

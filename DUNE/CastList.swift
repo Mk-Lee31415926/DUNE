@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct CastList: View{
-    let actors = [
+    let Atreides = [
         Actor(name: "Timothée Chalamet", cast_name: "Paul Atreides",
               actor_bio: """
               Timothée Hal Chalamet was born in Manhattan, to Nicole Flender, a real estate broker and dancer, and Marc Chalamet, a UNICEF editor. His mother, who is from New York, is Jewish, of Russian Jewish and Austrian Jewish descent. His father, who is from Nîmes, France, is of French and English ancestry. He is the brother of actress Pauline Chalamet, a nephew of director Rodman Flender, and a grandson of screenwriter Harold Flender.
@@ -49,15 +49,6 @@ struct CastList: View{
               Paul’s mother. Jessica is the concubine of Duke Leto Atreides. Though she acts like a wife to Leto and he has no other concubines, she is not married to Leto. Jessica is a member of the Bene Gesserit, a school that teaches and practices what many others think of as witchcraft. An orphan who never knew her parents, Jessica is tall and slender, with bronze-colored hair and green eyes.
               """
         ),
-        Actor(name: "Zendaya", cast_name: "Chani",
-              actor_bio: """
-              Zendaya (which means "to give thanks" in the language of Shona) is an American actress and singer born in Oakland, California. She began her career appearing as a child model working for Macy's, Mervyns and Old Navy. She was a backup dancer before gaining prominence for her role as Rocky Blue on the Disney Channel sitcom Shake It Up (2010) which also includes Bella Thorne, Kenton Duty and Roshon Fegan. Zendaya was a contestant on the sixteenth season of the competition series Dancing with the Stars. She went on to produce and star as K.C. Cooper in the Disney Channel sitcom K.C. Undercover (2015) She made her film breakthrough in 2017, starring as Michelle "MJ" Jones in the Marvel Cinematic Universe superhero film 蜘蛛人：返校日 (2017) and as Anne Wheeler in the musical drama film 大娛樂家 (2017) alongside actors such as Tom Holland, Hugh Jackman and Zac Efron. Besides acting, singing and dancing she is an ambassador for Convoy of Hope. She has written a book, launched her own clothing line (Daya by Zendaya) and proved herself to be a great role model for young girls all around the world.
-              - IMDb Mini Biography By: Mymble Ansdal
-      """,
-              cast_bio: """
-              Daughter of Liet-Kynes. Chani is one of the Fremen and has some of the skills of the Bene Gesserit. She is Paul’s age and gives birth to his first child.
-              """
-        ),
         Actor(name: "Oscar Isaac", cast_name: "Duke Leto Atreides",
               actor_bio: """
               Oscar Isaac was born Óscar Isaac Hernández Estrada in Guatemala, to a Guatemalan mother, María Eugenia, and a Cuban father, Oscar Gonzalo Hernández-Cano, a pulmonologist. Oscar was raised in Miami, Florida. Before he became an actor, he played lead guitar and sang vocals in his band the Blinking Underdogs. He graduated from the Juilliard School in 2005.
@@ -82,30 +73,6 @@ struct CastList: View{
               Duke Leto’s swordmaster. Duncan is a skilled warrior and a faithful servant of the duke and his family.
               """
         ),
-        Actor(name: "Stellan Skarsgård", cast_name: "Baron Vladimir Harkonnen",
-              actor_bio: """
-              Stellan Skarsgård was born in Gothenburg, Västra Götalands län, Sweden, to Gudrun (Larsson) and Jan Skarsgård. He became a star in his teens through the title role in the TV-series Bombi Bitt och jag (1968). Between the years 1972-88 he was employed at The Royal Dramatic Theatre in Stockholm, where he participated in "Vita rum" (1988), August Strindberg's "Ett drömspel" (1986) and "Mäster Olof" (1988). Simultaneously Skarsgård did outstanding film roles, notably in Den enfaldige mördaren (1982) by Hans Alfredson and with Fred Ward in American Playhouse: Noon Wine (1985). The fantastic performance gave him both a well-earned Guldbagge and Silver Berlin Bear. He portrayed the Skagen-painter Sören Kröyer in Hip hip hurra! (1987) and the Swedish ambassador Raoul Wallenberg in God afton, Herr Wallenberg (1990), both directed by Kjell Grede. Täcknamn Coq Rouge (1989) and Den demokratiske terroristen (1992) he played Jan Guillou's Swedish superagent Carl Hamilton. He also had the leading part in the Oscar nominated 公牛 (1991) directed by the world-famous cinematographer Sven Nykvist. Skarsgård did his first (but small) role in an big American film with 布拉格的春天 (1988). The role of Captain Tupolev in 獵殺紅色十月 (1990) was at supposed to be biggest part in a Hollywood-film, but unfortunately it was cut down. His breakthrough instead came with Lars von Trier's 破浪而出 (1996) opposite newcomer Emily Watson. After that Skarsgård got several supporting roles in American films, such as in My Son the Fanatic (1997), Gus Van Sant's 心靈捕手 (1997) and Steven Spielberg's 勇者無懼 (1997).
-              - IMDb Mini Biography By: Fredrik Klasson <fredrik.klasson@boras.mail.telia.com>
-
-              Stellan Skarsgård is a Swedish actor. He is known for his roles as Jan Nyman in 破浪而出 (1996), Prof. Gerald Lambeau in 心靈捕手 (1997), Bootstrap Bill in 加勒比海盗－ 神鬼奇航2 (2006) and 加勒比海盗－ 神鬼奇航：世界的盡頭 (2007), Bill Anderson in 媽媽咪呀！ (2008) and 媽媽咪呀！回來了 (2018), Martin Vanger in 千禧三部曲Ⅰ：龍紋身的女孩 (2011), and Dr. Erik Selvig in the Marvel Cinematic Universe films 雷神索爾 (2011), 復仇者聯盟 (2012), 雷神索爾2：黑暗世界 (2013), and 復仇者聯盟2：奧創紀元 (2015).
-
-              Skarsgård's first American film was the 1985 film American Playhouse: Noon Wine (1985), directed by Michael Fields, in which Skarsgård played a mentally-disturbed immigrant farmhand being chased by a bounty hunter. He acted opposite Fred Ward, who portrayed the farmer. In 1990 he starred in another American film, 獵殺紅色十月 (1990), playing the character of Captain Tupolev, a Soviet submarine commander.
-
-              Skarsgård is particularly associated with director Lars von Trier and has appeared in seven of the Danish auteur's features: 醫院風雲 (1994), 破浪而出 (1996), 在黑暗中漫舞 (2000), 厄夜變奏曲 (2003), 驚悚末日 (2011), 性愛成癮的女人（上） (2013) and 性愛成癮的女人（下） (2013).
-              - IMDb Mini Biography By: Pedro Borges
-      """,
-              cast_bio: """
-              Leader of the House of Harkonnen. The baron is the mortal enemy of the House of Atreides. The baron is very fat, and his bulk is supported by electronic suspenders.
-              """
-        ),
-        Actor(name: "Stephen McKinley Henderson", cast_name: "Thufir Hawat",
-              actor_bio: """
-              Stephen McKinley Henderson was born on August 31, 1949 in Kansas City, Missouri, USA. He is an actor, known for 心靈圍籬 (2016), 淑女鳥 (2017) and 林肯 (2012). He has been married to Pamela Reed Henderson since April 22, 1978.
-      """,
-              cast_bio: """
-              Duke Leto’s master of assassins. Hawat is a well-known Mentat, or a person trained to act completely logically. He serves as Leto’s main strategist and confidant. Hawat is old, having served three generations of Atreides. He has also trained Paul in combat and tactics.
-              """
-        ),
         Actor(name: "Josh Brolin", cast_name: "Gurney Halleck",
               actor_bio: """
               Rugged features and a natural charm have worked for Josh Brolin, the son of actor James Brolin. He has played roles as a policeman, a hunter, and the President of the United States.
@@ -127,6 +94,42 @@ struct CastList: View{
               Duke Leto’s master of arms, or war master. Halleck is well trained in the use of numerous weapons, and he is particularly good at swordplay with the use of personal electronic body shields. He is fond of music and plays the baliset, a guitarlike instrument. He has trained Paul in the art of personal combat and is an old friend of the Atreides’s.
               """
         ),
+        Actor(name: "Chang Chen", cast_name: "Dr. Wellington Yueh",
+              actor_bio: """
+              Chang Chen, an international renowned actor, first earned his attention at the age of 14 when he took the lead role in A Brighter Summer Day. Since then, he was nominated three times at the Golden Horse Awards, and several times for best actor at the Berlinale and the Cannes Film Festival. He won Best Actor at the 3rd Osaka Asia Film Festival for his performance in The Go Master.
+
+              Chang's outstanding versatile performance, coupled with his diligent learning attitude, made him the favorite cast of world's renowned directors. His dedication to filmmaking is seen not only in how he strives to improve his acting skills, but also the initiatives he had taken in learning local Uyghur language and horse riding for Crouching Tiger, Hidden Dragon, the game of go and meditation for The Go Master, and three years of practice bajiquan (martial arts) for the The Grandmaster which he later won first prize in a recognized competition.
+
+              In 2017, Chang's performance in Mr. Long was nominated for the 67th Berlinale international film festival in official competition.
+
+              In 2018, Chang was the only Asian actor who served as one of the juries at the 71st Cannes Film Festival.
+              - IMDb Mini Biography By: Project House
+      """,
+              cast_bio: """
+              The Atreides’s doctor. Yueh betrays the Atreides to the Harkonnens. His betrayal is particularly shocking because at this time, doctors of the Suk School are supposed to be heavily psychologically conditioned to never cause harm.
+              """
+        ),
+        Actor(name: "Stephen McKinley Henderson", cast_name: "Thufir Hawat",
+              actor_bio: """
+              Stephen McKinley Henderson was born on August 31, 1949 in Kansas City, Missouri, USA. He is an actor, known for 心靈圍籬 (2016), 淑女鳥 (2017) and 林肯 (2012). He has been married to Pamela Reed Henderson since April 22, 1978.
+      """,
+              cast_bio: """
+              Duke Leto’s master of assassins. Hawat is a well-known Mentat, or a person trained to act completely logically. He serves as Leto’s main strategist and confidant. Hawat is old, having served three generations of Atreides. He has also trained Paul in combat and tactics.
+              """
+        )
+    ]
+    
+    //---------------------------------------
+    let Fremens = [
+        Actor(name: "Zendaya", cast_name: "Chani",
+              actor_bio: """
+              Zendaya (which means "to give thanks" in the language of Shona) is an American actress and singer born in Oakland, California. She began her career appearing as a child model working for Macy's, Mervyns and Old Navy. She was a backup dancer before gaining prominence for her role as Rocky Blue on the Disney Channel sitcom Shake It Up (2010) which also includes Bella Thorne, Kenton Duty and Roshon Fegan. Zendaya was a contestant on the sixteenth season of the competition series Dancing with the Stars. She went on to produce and star as K.C. Cooper in the Disney Channel sitcom K.C. Undercover (2015) She made her film breakthrough in 2017, starring as Michelle "MJ" Jones in the Marvel Cinematic Universe superhero film 蜘蛛人：返校日 (2017) and as Anne Wheeler in the musical drama film 大娛樂家 (2017) alongside actors such as Tom Holland, Hugh Jackman and Zac Efron. Besides acting, singing and dancing she is an ambassador for Convoy of Hope. She has written a book, launched her own clothing line (Daya by Zendaya) and proved herself to be a great role model for young girls all around the world.
+              - IMDb Mini Biography By: Mymble Ansdal
+      """,
+              cast_bio: """
+              Daughter of Liet-Kynes. Chani is one of the Fremen and has some of the skills of the Bene Gesserit. She is Paul’s age and gives birth to his first child.
+              """
+        ),
         Actor(name: "Javier Bardem" , cast_name: "Stilgar",
               actor_bio: """
               Javier Bardem belongs to a family of actors that have been working on films since the early days of Spanish cinema.
@@ -145,22 +148,28 @@ struct CastList: View{
               cast_bio: """
               Planetologist for Arrakis, or an ecologist for planets. Unknown to the Harkonnens, Liet is also a member of the Fremen. He works with the Fremen to change Arrakis from a desert planet into a lush, green paradise.
               """
-        ),
-        Actor(name: "Chang Chen", cast_name: "Dr. Wellington Yueh",
+        )
+    ]
+    
+    //------------------------------------
+    let Harkonnen = [
+        Actor(name: "Stellan Skarsgård", cast_name: "Baron Vladimir Harkonnen",
               actor_bio: """
-              Chang Chen, an international renowned actor, first earned his attention at the age of 14 when he took the lead role in A Brighter Summer Day. Since then, he was nominated three times at the Golden Horse Awards, and several times for best actor at the Berlinale and the Cannes Film Festival. He won Best Actor at the 3rd Osaka Asia Film Festival for his performance in The Go Master.
+              Stellan Skarsgård was born in Gothenburg, Västra Götalands län, Sweden, to Gudrun (Larsson) and Jan Skarsgård. He became a star in his teens through the title role in the TV-series Bombi Bitt och jag (1968). Between the years 1972-88 he was employed at The Royal Dramatic Theatre in Stockholm, where he participated in "Vita rum" (1988), August Strindberg's "Ett drömspel" (1986) and "Mäster Olof" (1988). Simultaneously Skarsgård did outstanding film roles, notably in Den enfaldige mördaren (1982) by Hans Alfredson and with Fred Ward in American Playhouse: Noon Wine (1985). The fantastic performance gave him both a well-earned Guldbagge and Silver Berlin Bear. He portrayed the Skagen-painter Sören Kröyer in Hip hip hurra! (1987) and the Swedish ambassador Raoul Wallenberg in God afton, Herr Wallenberg (1990), both directed by Kjell Grede. Täcknamn Coq Rouge (1989) and Den demokratiske terroristen (1992) he played Jan Guillou's Swedish superagent Carl Hamilton. He also had the leading part in the Oscar nominated 公牛 (1991) directed by the world-famous cinematographer Sven Nykvist. Skarsgård did his first (but small) role in an big American film with 布拉格的春天 (1988). The role of Captain Tupolev in 獵殺紅色十月 (1990) was at supposed to be biggest part in a Hollywood-film, but unfortunately it was cut down. His breakthrough instead came with Lars von Trier's 破浪而出 (1996) opposite newcomer Emily Watson. After that Skarsgård got several supporting roles in American films, such as in My Son the Fanatic (1997), Gus Van Sant's 心靈捕手 (1997) and Steven Spielberg's 勇者無懼 (1997).
+              - IMDb Mini Biography By: Fredrik Klasson <fredrik.klasson@boras.mail.telia.com>
 
-              Chang's outstanding versatile performance, coupled with his diligent learning attitude, made him the favorite cast of world's renowned directors. His dedication to filmmaking is seen not only in how he strives to improve his acting skills, but also the initiatives he had taken in learning local Uyghur language and horse riding for Crouching Tiger, Hidden Dragon, the game of go and meditation for The Go Master, and three years of practice bajiquan (martial arts) for the The Grandmaster which he later won first prize in a recognized competition.
+              Stellan Skarsgård is a Swedish actor. He is known for his roles as Jan Nyman in 破浪而出 (1996), Prof. Gerald Lambeau in 心靈捕手 (1997), Bootstrap Bill in 加勒比海盗－ 神鬼奇航2 (2006) and 加勒比海盗－ 神鬼奇航：世界的盡頭 (2007), Bill Anderson in 媽媽咪呀！ (2008) and 媽媽咪呀！回來了 (2018), Martin Vanger in 千禧三部曲Ⅰ：龍紋身的女孩 (2011), and Dr. Erik Selvig in the Marvel Cinematic Universe films 雷神索爾 (2011), 復仇者聯盟 (2012), 雷神索爾2：黑暗世界 (2013), and 復仇者聯盟2：奧創紀元 (2015).
 
-              In 2017, Chang's performance in Mr. Long was nominated for the 67th Berlinale international film festival in official competition.
+              Skarsgård's first American film was the 1985 film American Playhouse: Noon Wine (1985), directed by Michael Fields, in which Skarsgård played a mentally-disturbed immigrant farmhand being chased by a bounty hunter. He acted opposite Fred Ward, who portrayed the farmer. In 1990 he starred in another American film, 獵殺紅色十月 (1990), playing the character of Captain Tupolev, a Soviet submarine commander.
 
-              In 2018, Chang was the only Asian actor who served as one of the juries at the 71st Cannes Film Festival.
-              - IMDb Mini Biography By: Project House
+              Skarsgård is particularly associated with director Lars von Trier and has appeared in seven of the Danish auteur's features: 醫院風雲 (1994), 破浪而出 (1996), 在黑暗中漫舞 (2000), 厄夜變奏曲 (2003), 驚悚末日 (2011), 性愛成癮的女人（上） (2013) and 性愛成癮的女人（下） (2013).
+              - IMDb Mini Biography By: Pedro Borges
       """,
               cast_bio: """
-              The Atreides’s doctor. Yueh betrays the Atreides to the Harkonnens. His betrayal is particularly shocking because at this time, doctors of the Suk School are supposed to be heavily psychologically conditioned to never cause harm.
+              Leader of the House of Harkonnen. The baron is the mortal enemy of the House of Atreides. The baron is very fat, and his bulk is supported by electronic suspenders.
               """
         ),
+        
         Actor(name: "Dave Bautista" , cast_name: "Beast Rabban Harkonnen",
               actor_bio: """
               David Michael Bautista, Jr. was born on January 18, 1969 in Washington, D.C., to Donna Raye (Mullins) and David Michael Bautista, a hairdresser. He has Filipino and Greek ancestry.
@@ -194,7 +203,9 @@ struct CastList: View{
               cast_bio: """
               Baron Harkonnen’s Mentat, a human trained to think logically, rationally, and mathematically to be the perfect adviser. Piter is ambitious and scheming, two emotional traits that are unusual and not desired in a Mentat.
               """
-        ),
+        )
+    ]
+    let Bene_Gesserit = [
         Actor(name: "Charlotte Rampling", cast_name: "Reverend Mother Mohiam",
               actor_bio: """
               Tessa Charlotte Rampling was born 5 February 1946 in Sturmer, England, to Isabel Anne (Gurteen), a painter, and Godfrey Lionel Rampling, an Olympic gold medalist, army officer, and colonel, who became a NATO commander. She was educated at Jeanne d'Arc Académie pour Jeunes Filles in Versailles, France and at the exclusive St. Hilda's school in Bushey, England. She was a model before entering films in Richard Lester's The Knack ...and How to Get It (1965), followed by roles in Georgy Girl (1966) and Luchino Visconti's 納粹狂魔 (1969). Rampling is best known for her role in Liliana Cavani's Il portiere di notte (1974), where she played a concentration camp survivor who is reunited with the Nazi guard (Dirk Bogarde) who tortured her throughout her captivity. In 1974, she co-starred with Sean Connery in John Boorman's science fiction adventure Zardoz (1974), with Robert Mitchum in Farewell, My Lovely (1975), with Woody Allen in his 星塵往事 (1980), and with Paul Newman in Sidney Lumet's 大審判 (1982). An actress always willing to take on bold and meaningful roles, Rampling had perhaps the most off-beat one in Nagisa Ôshima's 1986 comedy Max mon amour (1986) as Margaret, a woman in love with a chimpanzee. She has also voiced video games, such as The Ring.
@@ -203,9 +214,31 @@ struct CastList: View{
               cast_bio: """
               Spiritual leader of the Bene Gesserit. Mohiam is old and serves as the emperor’s truthsayer, a person who can tell the emperor whether someone is lying. Before he leaves for Arrakis, Mohiam puts Paul through a severe test of endurance.
               """
+        ),
+        Actor(name: "Rebecca Ferguson", cast_name: "Lady Jessica Atreides",
+              actor_bio: """
+              Rebecca Ferguson was born Rebecca Louisa Ferguson Sundström in Stockholm, Sweden, and grew up in its Vasastaden district. Her father is Swedish. Her mother, Rosemary Ferguson, is British, of Scottish and Northern Irish descent, and moved to Sweden at the age of 25. Rebecca attended an English-speaking school in Sweden and was raised bilingual, speaking Swedish and English. As a student, she attended the Adolf Fredrik's Music School in Stockholm and graduated in 1999.
+
+              She came into prominence with her breakout role of upper-class girl Anna Gripenhielm in the soap-opera Nya tider (1999), when she was 16 years old.
+
+              She lives in the seaside town of Simrishamn, on the Swedish south coast. Ferguson has said she wanted to get away from city life and the public spotlight following her soap opera success. Swedish director Richard Hobert, spotted her at the town market in 2011, which led to her starring in his film En enkel till Antibes (2011).
+
+              Ferguson taught Argentinian Tango at a dance company in Sweden for a few years.
+
+              In 2013, Rebecca played Queen Elizabeth Woodville in the BBC historical drama 白皇后 (2013), for which she got a Golden Globe nomination.
+
+              In 2015, Ferguson played Ilsa Faust, the female lead in 不可能的任務：失控國度 (2015). Her co-star, Tom Cruise, chose her for the film after having seen her in the mini-series 白皇后 (2013). Her performance in the movie was highly praised and Rebecca will reprise her role in the sixth Mission: Impossible film.
+
+              In 2016, she starred in Despite the Falling Snow (2016), 走音天后 (2016) and 列車上的女孩 (2016).
+
+              Her upcoming projects are 異星智慧 (2017), 雪人 (2017), 大娛樂家 (2017), The Lady and the Panda and 不可能的任務：全面瓦解 (2018).
+              - IMDb Mini Biography By: Polly_Kat
+      """,
+              cast_bio: """
+              Paul’s mother. Jessica is the concubine of Duke Leto Atreides. Though she acts like a wife to Leto and he has no other concubines, she is not married to Leto. Jessica is a member of the Bene Gesserit, a school that teaches and practices what many others think of as witchcraft. An orphan who never knew her parents, Jessica is tall and slender, with bronze-colored hair and green eyes.
+              """
         )
     ]
-    
     var body: some View{
         NavigationView {
                 
@@ -214,15 +247,53 @@ struct CastList: View{
                     .resizable()
                     .scaledToFill()
                 List{
-                    ForEach(actors){ actor in
-                        //I want to call each tab detail respectively here,
-                        //not click on entire row
-                        NavigationLink(
-                            destination: ActorDetail(actor: actor),
-                            label: {
-                                CastRow(actor: actor)
-                            }
-                        )
+                   Section(header: Text("House Atreides")){
+                        ForEach(Atreides){ actor in
+                            //I want to call each tab detail respectively here,
+                            //not click on entire row
+                            NavigationLink(
+                                destination: ActorDetail(actor: actor),
+                                label: {
+                                    CastRow(actor: actor)
+                                }
+                            )
+                        }
+                    }
+                    Section(header: Text("House Harkonnen")) {
+                        ForEach(Harkonnen){ actor in
+                            //I want to call each tab detail respectively here,
+                            //not click on entire row
+                            NavigationLink(
+                                destination: ActorDetail(actor: actor),
+                                label: {
+                                    CastRow(actor: actor)
+                                }
+                            )
+                        }
+                    }
+                    Section(header: Text("Fremens")) {
+                        ForEach(Fremens){ actor in
+                            //I want to call each tab detail respectively here,
+                            //not click on entire row
+                            NavigationLink(
+                                destination: ActorDetail(actor: actor),
+                                label: {
+                                    CastRow(actor: actor)
+                                }
+                            )
+                        }
+                    }
+                    Section(header: Text("Bene Gesserit")) {
+                        ForEach(Bene_Gesserit){ actor in
+                            //I want to call each tab detail respectively here,
+                            //not click on entire row
+                            NavigationLink(
+                                destination: ActorDetail(actor: actor),
+                                label: {
+                                    CastRow(actor: actor)
+                                }
+                            )
+                        }
                     }
                 }
             }
@@ -235,5 +306,11 @@ struct CastList: View{
                     }
                 }
         }
+    }
+}
+
+struct CastList_previews: PreviewProvider{
+    static var previews: some View{
+        CastList()
     }
 }
