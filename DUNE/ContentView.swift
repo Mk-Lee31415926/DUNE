@@ -8,6 +8,8 @@ import AVKit
 import SwiftUI
 
 struct ContentView: View {
+    let casts = [
+        "Paul Atreides","Lady Jessica Atreides","Duke Leto Atreides","Duncan Idaho","Gurney Halleck","Dr. Wellington Yueh","Thufir Hawat","Chani","Stilgar","Dr. Liet Kynes","Baron Vladimir Harkonnen","Beast Rabban Harkonnen","Piter de Vries","Reverend Mother Mohiam"]
     @State private var shoWhich: Int = 0
     //引入mp4檔會導致preview掛掉
     //let videoUrl = URL(fileURLWithPath: Bundle.main.path(forResource: "mainPgMotion", ofType: "mp4")!)
@@ -19,10 +21,11 @@ struct ContentView: View {
                 Text("TEXT")
                 .font(.custom("ROCKETWILDNESS",size: 30))
                 .fontWeight(.heavy)
-                .background(Image("DUNEmainPgCover")
+                .background(Image("MainPgCover")
                                 .resizable()
-                                .scaledToFit()
-                                .frame(width: 400, height: 400, alignment: .center)
+                                .scaledToFill()
+                                .frame(width: 440, height: .infinity, alignment: .center)
+                                .clipped()
                 )
 
 //                VideoPlayer(player: AVPlayer(url: videoUrl))
@@ -47,12 +50,12 @@ struct ContentView: View {
             //which role do you play in this world?
             //character random
             //how to get actors to this page??
-            GiveMe(name:"Avenger\(shoWhich)")
+            GiveMe(name:casts[shoWhich])
             .onTapGesture {
-                shoWhich = Int.random(in: 0...11)
+                shoWhich = Int.random(in: 0...14)
             }
             .tabItem {
-                Label("製作中",systemImage:"nose")
+                Label("Random",systemImage:"dice")
             }
         }
         .navigationTitle("Now you're stuck.")
@@ -65,6 +68,7 @@ struct ContentView_Previews: PreviewProvider {
         NavigationView {
             ContentView()
         }
+        .preferredColorScheme(.dark)
     }
 }
 

@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct CastList: View{
+    
     let Atreides = [
         Actor(name: "Timothée Chalamet", cast_name: "Paul Atreides",
               actor_bio: """
@@ -24,7 +25,8 @@ struct CastList: View{
               """,
               cast_bio: """
               The protagonist of Dune. Paul is the son of Duke Leto Atreides and is the heir to the House of the Atreides. At the beginning of the novel, Paul is fifteen years old. He has been trained from birth to fulfill the role of duke, and he is adept at combat and strategic thinking. Paul is also a quiet, thoughtful, and observant young man. Paul is not overly tall or muscular, but he is strong and quick. Among the Fremen, Paul has two names: Usul, which signifies strength, and Muad’Dib, the name of the desert mouse on Arrakis.
-              """
+              """,
+              actor_link:"https://www.imdb.com/name/nm3154303/?ref_=tt_cl_t_1"
         ),
         Actor(name: "Rebecca Ferguson", cast_name: "Lady Jessica Atreides",
               actor_bio: """
@@ -47,7 +49,8 @@ struct CastList: View{
       """,
               cast_bio: """
               Paul’s mother. Jessica is the concubine of Duke Leto Atreides. Though she acts like a wife to Leto and he has no other concubines, she is not married to Leto. Jessica is a member of the Bene Gesserit, a school that teaches and practices what many others think of as witchcraft. An orphan who never knew her parents, Jessica is tall and slender, with bronze-colored hair and green eyes.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm0272581/?ref_=tt_cl_t_2"
         ),
         Actor(name: "Oscar Isaac", cast_name: "Duke Leto Atreides",
               actor_bio: """
@@ -62,7 +65,8 @@ struct CastList: View{
       """,
               cast_bio: """
               Paul’s father. Duke Leto Atreides is the head of the House of Atreides and the rightful ruler of Arrakis. The duke received Arrakis from the emperor in exchange for Leto’s own planet of Caladan, which was given to the duke’s mortal enemy, Baron Harkonnen. The duke is a wise, intelligent, and compassionate man, but he is ruthless when it comes to dealing with his enemies. He cares very much for his concubine, Jessica, and their son, Paul.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm1209966/?ref_=tt_cl_t_4"
         ),
         Actor(name: "Jason Momoa", cast_name: "Duncan Idaho",
               actor_bio: """
@@ -71,19 +75,14 @@ struct CastList: View{
       """,
               cast_bio: """
               Duke Leto’s swordmaster. Duncan is a skilled warrior and a faithful servant of the duke and his family.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm0597388/?ref_=tt_cl_t_5"
         ),
         Actor(name: "Josh Brolin", cast_name: "Gurney Halleck",
               actor_bio: """
               Rugged features and a natural charm have worked for Josh Brolin, the son of actor James Brolin. He has played roles as a policeman, a hunter, and the President of the United States.
 
               Brolin was born February 12, 1968 in Santa Monica, California, to Jane Cameron (Agee), a Texas-born wildlife activist, and James Brolin. Josh was not interested at first in the lifestyle of the entertainment business, in light of his parents' divorce, and both of them being actors. However, during junior year in high school, he took an acting class to see what it was like. He played Stanley in "A Streetcar Named Desire" and became hooked. His first major screen role was as the older brother in the film 七寶奇謀 (1985), based on a story by Steven Spielberg. He then immediately moved on to work on television, taking roles on such series as Private Eye: Pilot (1987) and The Young Riders (1989). "Private Eye" was a chance for Brolin to play a detective. "The Young Riders" was set just before the Civil War, and was co-directed by Brolin's father, James Brolin.
-
-              After The Young Riders (1989), Brolin moved back to the big screen, with mediocre success. He played a supporting role in The Road Killers (1994), but the film was not a success. He followed up with the crime film Gang in Blue (1996), the romantic film Bed of Roses (1996), the thriller film 看誰在尖叫 (1997), and appeared with his father in My Brother's War (1997). However, nothing truly stuck out, especially not the box office flop 掃蕩三人組 (1999). The 2000s initially brought no significant change in Brolin's career. He appeared in the independent film Slow Burn (2000), the sci-if thriller 透明人 (2000) and starred on the television series Mister Sterling (2003). In 2004, he married actress Diane Lane and are still together.
-
-              It was not until 2007 that Brolin received much acclaim for his films. He took a supporting role in the Quentin Tarantino-written 刑房 (2007) which was a two-part film accounting two horror stories. He also played two policemen that year: corrupt officer Nick Trupo in the crime epic 美國黑幫 (2007), and an honest police chief in the emotional drama 震撼效應 (2007) which starred Tommy Lee Jones and was directed by Paul Haggis. However, it was his involvement in 險路勿近 (2007) that truly pushed him into the limelight. The film, directed by the Coen brothers, was about a man (Brolin) who finds a satchel containing two million dollars in cash. He is pursued by an unstoppable assassin (Javier Bardem, who won an Oscar for his work) and his friend, a local sheriff (Tommy Lee Jones). The film won four Oscars, including Best Picture and Best Director.
-
-              Brolin found high-profile work the next year, being cast as Supervisor Dan White in the film 自由大道 (2008). His performance as the weak and bitter politician earned him an Oscar nomination, and Brolin received more praise for his fascinating portrayal of George W. Bush in the Oliver Stone film 喬治．布希之叱吒風雲 (2008). Despite the mediocre success of 喬治．布希之叱吒風雲 (2008), he was recognized as the best part of the film, and 自由大道 (2008) was another triumph, critically and commercially.
 
               Brolin then acted in the smaller comedy Women in Trouble (2009) before landing a number of large roles in 2010. The first of these was the film based on the comic book figure 疤面鬼煞手 (2010). The film was a box office flop and critically panned, but Brolin also forged a second collaboration with legendary director Oliver Stone for 華爾街：金錢萬歲 (2010). Brolin played a large role alongside such young stars as Carey Mulligan and Shia LaBeouf, and older thespians such as Michael Douglas, Eli Wallach, and Frank Langella. Brolin's character was Bretton James, a top banker in the film, and also the film's chief antagonist. Brolin also appeared in Woody Allen's London-based film 命中注定，遇見愛 (2010) and a second collaboration with the Coen Brothers, which was a remake of 大地驚雷 (1969).
 
@@ -92,7 +91,8 @@ struct CastList: View{
       """,
               cast_bio: """
               Duke Leto’s master of arms, or war master. Halleck is well trained in the use of numerous weapons, and he is particularly good at swordplay with the use of personal electronic body shields. He is fond of music and plays the baliset, a guitarlike instrument. He has trained Paul in the art of personal combat and is an old friend of the Atreides’s.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm0000982/?ref_=tt_cl_t_8"
         ),
         Actor(name: "Chang Chen", cast_name: "Dr. Wellington Yueh",
               actor_bio: """
@@ -107,7 +107,8 @@ struct CastList: View{
       """,
               cast_bio: """
               The Atreides’s doctor. Yueh betrays the Atreides to the Harkonnens. His betrayal is particularly shocking because at this time, doctors of the Suk School are supposed to be heavily psychologically conditioned to never cause harm.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm0151654/?ref_=tt_cl_t_11"
         ),
         Actor(name: "Stephen McKinley Henderson", cast_name: "Thufir Hawat",
               actor_bio: """
@@ -115,7 +116,8 @@ struct CastList: View{
       """,
               cast_bio: """
               Duke Leto’s master of assassins. Hawat is a well-known Mentat, or a person trained to act completely logically. He serves as Leto’s main strategist and confidant. Hawat is old, having served three generations of Atreides. He has also trained Paul in combat and tactics.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm0376610/?ref_=tt_cl_t_7"
         )
     ]
     
@@ -128,7 +130,8 @@ struct CastList: View{
       """,
               cast_bio: """
               Daughter of Liet-Kynes. Chani is one of the Fremen and has some of the skills of the Bene Gesserit. She is Paul’s age and gives birth to his first child.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm3918035/?ref_=tt_cl_t_3"
         ),
         Actor(name: "Javier Bardem" , cast_name: "Stilgar",
               actor_bio: """
@@ -139,7 +142,8 @@ struct CastList: View{
       """,
               cast_bio: """
               A leader of the Fremen, the native people of Arrakis who live in the desert. Stilgar is wise, experienced, and familiar with the legends and folklore of the Fremen.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm0000849/?ref_=tt_cl_t_9"
         ),
         Actor(name: "Sharon Duncan-Brewster", cast_name: "Dr. Liet Kynes",
               actor_bio: """
@@ -147,7 +151,8 @@ struct CastList: View{
       """,
               cast_bio: """
               Planetologist for Arrakis, or an ecologist for planets. Unknown to the Harkonnens, Liet is also a member of the Fremen. He works with the Fremen to change Arrakis from a desert planet into a lush, green paradise.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm1004267/?ref_=tt_cl_t_10"
         )
     ]
     
@@ -155,36 +160,28 @@ struct CastList: View{
     let Harkonnen = [
         Actor(name: "Stellan Skarsgård", cast_name: "Baron Vladimir Harkonnen",
               actor_bio: """
-              Stellan Skarsgård was born in Gothenburg, Västra Götalands län, Sweden, to Gudrun (Larsson) and Jan Skarsgård. He became a star in his teens through the title role in the TV-series Bombi Bitt och jag (1968). Between the years 1972-88 he was employed at The Royal Dramatic Theatre in Stockholm, where he participated in "Vita rum" (1988), August Strindberg's "Ett drömspel" (1986) and "Mäster Olof" (1988). Simultaneously Skarsgård did outstanding film roles, notably in Den enfaldige mördaren (1982) by Hans Alfredson and with Fred Ward in American Playhouse: Noon Wine (1985). The fantastic performance gave him both a well-earned Guldbagge and Silver Berlin Bear. He portrayed the Skagen-painter Sören Kröyer in Hip hip hurra! (1987) and the Swedish ambassador Raoul Wallenberg in God afton, Herr Wallenberg (1990), both directed by Kjell Grede. Täcknamn Coq Rouge (1989) and Den demokratiske terroristen (1992) he played Jan Guillou's Swedish superagent Carl Hamilton. He also had the leading part in the Oscar nominated 公牛 (1991) directed by the world-famous cinematographer Sven Nykvist. Skarsgård did his first (but small) role in an big American film with 布拉格的春天 (1988). The role of Captain Tupolev in 獵殺紅色十月 (1990) was at supposed to be biggest part in a Hollywood-film, but unfortunately it was cut down. His breakthrough instead came with Lars von Trier's 破浪而出 (1996) opposite newcomer Emily Watson. After that Skarsgård got several supporting roles in American films, such as in My Son the Fanatic (1997), Gus Van Sant's 心靈捕手 (1997) and Steven Spielberg's 勇者無懼 (1997).
-              - IMDb Mini Biography By: Fredrik Klasson <fredrik.klasson@boras.mail.telia.com>
-
-              Stellan Skarsgård is a Swedish actor. He is known for his roles as Jan Nyman in 破浪而出 (1996), Prof. Gerald Lambeau in 心靈捕手 (1997), Bootstrap Bill in 加勒比海盗－ 神鬼奇航2 (2006) and 加勒比海盗－ 神鬼奇航：世界的盡頭 (2007), Bill Anderson in 媽媽咪呀！ (2008) and 媽媽咪呀！回來了 (2018), Martin Vanger in 千禧三部曲Ⅰ：龍紋身的女孩 (2011), and Dr. Erik Selvig in the Marvel Cinematic Universe films 雷神索爾 (2011), 復仇者聯盟 (2012), 雷神索爾2：黑暗世界 (2013), and 復仇者聯盟2：奧創紀元 (2015).
-
-              Skarsgård's first American film was the 1985 film American Playhouse: Noon Wine (1985), directed by Michael Fields, in which Skarsgård played a mentally-disturbed immigrant farmhand being chased by a bounty hunter. He acted opposite Fred Ward, who portrayed the farmer. In 1990 he starred in another American film, 獵殺紅色十月 (1990), playing the character of Captain Tupolev, a Soviet submarine commander.
-
-              Skarsgård is particularly associated with director Lars von Trier and has appeared in seven of the Danish auteur's features: 醫院風雲 (1994), 破浪而出 (1996), 在黑暗中漫舞 (2000), 厄夜變奏曲 (2003), 驚悚末日 (2011), 性愛成癮的女人（上） (2013) and 性愛成癮的女人（下） (2013).
+            Stellan Skarsgård was born in Gothenburg, Västra Götalands län, Sweden, to Gudrun (Larsson) and Jan Skarsgård.
+            Stellan Skarsgård is a Swedish actor.
+            He is known for his roles as
+            Jan Nyman in 破浪而出 (1996), Prof.
+            Gerald Lambeau in 心靈捕手 (1997),
+            Bootstrap Bill in 加勒比海盗－ 神鬼奇航2 (2006) and 加勒比海盗－ 神鬼奇航：世界的盡頭 (2007),
+            Bill Anderson in 媽媽咪呀！ (2008) and 媽媽咪呀！回來了 (2018),
+            Martin Vanger in 千禧三部曲Ⅰ：龍紋身的女孩 (2011),
+            Dr. Erik Selvig in the Marvel Cinematic Universe films 雷神索爾 (2011), 復仇者聯盟 (2012), 雷神索爾2：黑暗世界 (2013), and 復仇者聯盟2：奧創紀元 (2015).
               - IMDb Mini Biography By: Pedro Borges
       """,
               cast_bio: """
               Leader of the House of Harkonnen. The baron is the mortal enemy of the House of Atreides. The baron is very fat, and his bulk is supported by electronic suspenders.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm0001745/?ref_=tt_cl_t_6"
         ),
         
         Actor(name: "Dave Bautista" , cast_name: "Beast Rabban Harkonnen",
               actor_bio: """
               David Michael Bautista, Jr. was born on January 18, 1969 in Washington, D.C., to Donna Raye (Mullins) and David Michael Bautista, a hairdresser. He has Filipino and Greek ancestry.
 
-              When WCW officials told him he'd never make it in sports entertainment, Bautista pushed himself to achieve his dream of being a Superstar. In May 2002, he made his debut on SmackDown using the ring name Batista, but it wasn't until a move to Raw and two victories over Kane that "The Animal" began to make noise in the WWE Universe. The wins impressed Ric Flair and Triple H, who were looking to align themselves with the industry's brightest new stars. After a lengthy search, they identified Randy Orton and Batista. Collectively the four Superstars became known as Evolution.
-
-              Batista earned his first championship alongside "The Nature Boy" when the duo captured the WWE Tag Team Championships in December 2003. As Evolution dominated WWE, Batista started to emerge from the shadows of Triple H and Ric Flair. By the time Batista won the 2005 Royal Rumble Match, World Heavyweight Champion Triple H viewed him as a serious threat to his title.
-
-              After a triceps injury at the hands of Mark Henry forced Batista to relinquish the title in January 2006, he vowed to return. Batista successfully regained the World Heavyweight Championship at Survivor Series in 2006. Four months into his second reign, Batista faced the Undertaker at WrestleMania 23. "The Animal" took Undertaker to the limit, but was unable to stop the streak of "The Deadman" at WrestleMania. Though disappointed, Batista stayed hungry and always managed to keep himself in the championship hunt for the rest of his career.
-
-              At Bragging Rights in 2009, Batista shocked the world when he blamed Rey Mysterio for a loss to Undertaker, then attacked his former tag team partner. "The Animal" then became locked in a tense rivalry with another former friend, John Cena, over the WWE Championship. The grueling match at Over the Limit led to a wheelchair-bound Batista declaring "I quit!" the following night on Raw before fading from the WWE Universe in May 2010. Following his departure from WWE, Bautista appeared opposite Vin Diesel in the Universal film 超世紀戰警：闇黑對決 (2013) and RZA's feature directorial debut The Man with the Iron Fists (2012), in which he played the villainous Brass Body and starred opposite Russell Crowe and Lucy Liu. His other film credits include The Scorpion King 3: Battle for Redemption (2012), where he played Argomael; the action film House of the Rising Sun (2011); and Wrong Side of Town (2010) opposite rapper Ja Rule.
-
-              Two years later, he joined MMA and won his first professional MMA fight. In January 2014, he made his long awaited return to the WWE, before quitting a second time in June of that same year. He did this in order to promote 星際異攻隊 (2014), which was released on August 1, 2014, and starred Chris Pratt, Benicio Del Toro, Zoe Saldana, and Djimon Hounsou, alongside Bautista.
-
-              He will shoot Kickboxer: Vengeance (2016), directed by John Stockwell, and co-starring martial artist Alain Moussi and UFC fighter Georges St-Pierre. The remake of the 1989 Jean-Claude Van Damme film, Kickboxer (1989) is about two brothers David and Kurt Sloan; When David wins the Karate World Championship, a promoter lures him to Hong Kong, despite his brother's protestations that the man is a crook. When Kurt travels to Thailand to meet his brother, he discovers he has died and seeks his revenge.
+             He joined MMA and won his first professional MMA fight. In January 2014, he made his long awaited return to the WWE, before quitting a second time in June of that same year. He did this in order to promote 星際異攻隊 (2014), which was released on August 1, 2014, and starred Chris Pratt, Benicio Del Toro, Zoe Saldana, and Djimon Hounsou, alongside Bautista.
 
               After starring in films such as, 星際異攻隊2 (2017), 銀翼殺手2049 (2017), 復仇者聯盟：無限之戰 (2018), Hotel Artemis (2018), 鋼鐵墳墓2 (2018), and Final Score (2018), he made a special guest appearance on WWF SmackDown! (1999) for it's 1000 episode reuniting with his former Evolution members Triple H, Randy Orton, and Ric Flair on October 16, 2018. The following year on February 25, 2019, he made his return to WWE Monday Night RAW (1993) when he attacked Ric Flair on his 70th birthday at the end of the episode sending a message to Triple H that would ultimately lead to a No Holds Barred match for WrestleMania 35 (2019). Batista added the stipulation that if he wins the match, Triple H will have to retire from in-ring competition. As a result, Triple H was finally able to beat Batista for the first time and won the match, which ultimately led to Batista announcing his official retirement from wrestling in the WWE. Following his retirement, he will continue with his career as an actor in Hollywood.
 
@@ -193,7 +190,8 @@ struct CastList: View{
       """,
               cast_bio: """
               A nephew of Baron Harkonnen’s. Before the novel begins, Rabban is the ruler of Arrakis. When the Atreides take over Arrakis, he must step down. However, Rabban rules Arrakis again after the Harkonnens seize back Arrakis.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm1176985/?ref_=tt_cl_t_12"
         ),
         Actor(name: "David Dastmalchian", cast_name: "Piter de Vries",
               actor_bio: """
@@ -202,7 +200,8 @@ struct CastList: View{
       """,
               cast_bio: """
               Baron Harkonnen’s Mentat, a human trained to think logically, rationally, and mathematically to be the perfect adviser. Piter is ambitious and scheming, two emotional traits that are unusual and not desired in a Mentat.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm2810287/?ref_=tt_cl_t_13"
         )
     ]
     let Bene_Gesserit = [
@@ -213,17 +212,12 @@ struct CastList: View{
       """,
               cast_bio: """
               Spiritual leader of the Bene Gesserit. Mohiam is old and serves as the emperor’s truthsayer, a person who can tell the emperor whether someone is lying. Before he leaves for Arrakis, Mohiam puts Paul through a severe test of endurance.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm0001648/?ref_=tt_cl_t_14"
         ),
         Actor(name: "Rebecca Ferguson", cast_name: "Lady Jessica Atreides",
               actor_bio: """
               Rebecca Ferguson was born Rebecca Louisa Ferguson Sundström in Stockholm, Sweden, and grew up in its Vasastaden district. Her father is Swedish. Her mother, Rosemary Ferguson, is British, of Scottish and Northern Irish descent, and moved to Sweden at the age of 25. Rebecca attended an English-speaking school in Sweden and was raised bilingual, speaking Swedish and English. As a student, she attended the Adolf Fredrik's Music School in Stockholm and graduated in 1999.
-
-              She came into prominence with her breakout role of upper-class girl Anna Gripenhielm in the soap-opera Nya tider (1999), when she was 16 years old.
-
-              She lives in the seaside town of Simrishamn, on the Swedish south coast. Ferguson has said she wanted to get away from city life and the public spotlight following her soap opera success. Swedish director Richard Hobert, spotted her at the town market in 2011, which led to her starring in his film En enkel till Antibes (2011).
-
-              Ferguson taught Argentinian Tango at a dance company in Sweden for a few years.
 
               In 2013, Rebecca played Queen Elizabeth Woodville in the BBC historical drama 白皇后 (2013), for which she got a Golden Globe nomination.
 
@@ -236,73 +230,87 @@ struct CastList: View{
       """,
               cast_bio: """
               Paul’s mother. Jessica is the concubine of Duke Leto Atreides. Though she acts like a wife to Leto and he has no other concubines, she is not married to Leto. Jessica is a member of the Bene Gesserit, a school that teaches and practices what many others think of as witchcraft. An orphan who never knew her parents, Jessica is tall and slender, with bronze-colored hair and green eyes.
-              """
+              """,
+              actor_link: "https://www.imdb.com/name/nm0272581/?ref_=tt_cl_t_2"
         )
     ]
     var body: some View{
         NavigationView {
-                
             ZStack {
-                Image("CastView_bg")
-                    .resizable()
-                    .scaledToFill()
                 List{
-                   Section(header: Text("House Atreides")){
+                    ScrollView(.horizontal) {
+                        LazyHStack(spacing:20){
+                            ForEach(Atreides){ actor in
+                                NavigationLink(
+                                    destination: CastDetail(actor: actor),
+                                    label: {
+                                        LittleCastView(actor: actor)
+                                    }
+                                )
+                            }
+                            ForEach(Harkonnen){ actor in
+                                NavigationLink(
+                                    destination: CastDetail(actor: actor),
+                                    label: {
+                                        LittleCastView(actor: actor)
+                                    }
+                                )
+                            }
+                            ForEach(Fremens){ actor in
+                                NavigationLink(
+                                    destination: CastDetail(actor: actor),
+                                    label: {
+                                        LittleCastView(actor: actor)
+                                    }
+                                )
+                            }
+                            ForEach(Bene_Gesserit){ actor in
+                                NavigationLink(
+                                    destination: CastDetail(actor: actor),
+                                    label: {
+                                        LittleCastView(actor: actor)
+                                    }
+                                )
+                            }
+                        }
+                    }
+                    Section(header: SectionTextView(section: "House Atreides")){
                         ForEach(Atreides){ actor in
                             //I want to call each tab detail respectively here,
                             //not click on entire row
-                            NavigationLink(
-                                destination: ActorDetail(actor: actor),
-                                label: {
-                                    CastRow(actor: actor)
-                                }
-                            )
+                            CastRow(actor: actor)
                         }
                     }
-                    Section(header: Text("House Harkonnen")) {
+                    Section(header: SectionTextView(section: "House Harkonnen")) {
                         ForEach(Harkonnen){ actor in
                             //I want to call each tab detail respectively here,
                             //not click on entire row
-                            NavigationLink(
-                                destination: ActorDetail(actor: actor),
-                                label: {
-                                    CastRow(actor: actor)
-                                }
-                            )
+                            CastRow(actor: actor)
                         }
                     }
-                    Section(header: Text("Fremens")) {
+                    Section(header: SectionTextView(section: "Fremens")) {
                         ForEach(Fremens){ actor in
                             //I want to call each tab detail respectively here,
                             //not click on entire row
-                            NavigationLink(
-                                destination: ActorDetail(actor: actor),
-                                label: {
-                                    CastRow(actor: actor)
-                                }
-                            )
+                           CastRow(actor: actor)
                         }
                     }
-                    Section(header: Text("Bene Gesserit")) {
+                    Section(header: SectionTextView(section:"Bene Gesserit")) {
                         ForEach(Bene_Gesserit){ actor in
                             //I want to call each tab detail respectively here,
                             //not click on entire row
-                            NavigationLink(
-                                destination: ActorDetail(actor: actor),
-                                label: {
-                                    CastRow(actor: actor)
-                                }
-                            )
+                            CastRow(actor: actor)
                         }
                     }
                 }
+//                .background(Image("CastView_bg")
+//                                .resizable()
+//                                .scaledToFill()) 無效
             }
             .navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
             .toolbar{
                 ToolbarItem(placement: .principal){
-                        VStack {
-                            Text("Top Cast").font(.headline)
-                        }
+                    Text("Top Cast").font(.headline)
                     }
                 }
         }
@@ -312,5 +320,30 @@ struct CastList: View{
 struct CastList_previews: PreviewProvider{
     static var previews: some View{
         CastList()
+            .preferredColorScheme(.dark)
+    }
+}
+
+struct SectionTextView: View {
+    let section: String
+    var body: some View {
+        Text(section)
+            .font(.custom("ROCKETWILDNESS",size: 40))
+            .foregroundColor(Color("ConceptColor01"))
+            .background(LinearGradient(gradient: Gradient(colors: [Color("ConceptColor03"), Color.white]), startPoint: /*@START_MENU_TOKEN@*/.topLeading/*@END_MENU_TOKEN@*/, endPoint: .bottomTrailing))
+            .padding(.trailing, 11.0)
+    }
+}
+
+struct LittleCastView: View {
+    let actor: Actor
+    var body: some View {
+        Image(actor.cast_name)
+            .resizable()
+            .clipShape(Circle())
+            .scaledToFill()
+            .frame(width:100,height:100)
+            .padding()
+            .shadow(color: Color("ConceptColor02"), radius: 15, x: 10, y: 10)
     }
 }

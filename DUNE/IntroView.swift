@@ -9,11 +9,13 @@ import SwiftUI
 
 struct IntroView: View {
     var body: some View {
+        
         NavigationView {
             ZStack {
                 Image("DuneConceptArt")
                     .resizable()
                     .scaledToFit()
+                    .background(Color("ConceptColor03"))  // wont work?
                 // Use Text As Link to main page
                 NavigationLink(
                     destination: ContentView(),
@@ -34,7 +36,7 @@ struct IntroView: View {
                 )
                 
             }
-            .background(Color("ConceptColor03"))  // wont work?
+
             .navigationTitle("Welcome To DUNE")
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -44,5 +46,6 @@ struct IntroView: View {
 struct IntroView_Previews: PreviewProvider {
     static var previews: some View {
         IntroView()
+            .preferredColorScheme(.dark)
     }
 }

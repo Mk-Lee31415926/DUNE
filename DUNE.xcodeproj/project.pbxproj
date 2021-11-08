@@ -16,6 +16,7 @@
 		5546912E272E8BF0000D8C0C /* CastList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5546912C272E8BF0000D8C0C /* CastList.swift */; };
 		55469131272E8C06000D8C0C /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55469130272E8C06000D8C0C /* IntroView.swift */; };
 		55469136272E9D80000D8C0C /* ActorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55469135272E9D80000D8C0C /* ActorDetail.swift */; };
+		55742494273900EA00A487E3 /* CastDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55742493273900EA00A487E3 /* CastDetail.swift */; };
 		558C049627327511001FD226 /* Rocketwildness-7BB8R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558C049527327511001FD226 /* Rocketwildness-7BB8R.ttf */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		5546912C272E8BF0000D8C0C /* CastList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastList.swift; sourceTree = "<group>"; };
 		55469130272E8C06000D8C0C /* IntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		55469135272E9D80000D8C0C /* ActorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDetail.swift; sourceTree = "<group>"; };
+		55742493273900EA00A487E3 /* CastDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastDetail.swift; sourceTree = "<group>"; };
 		558C049527327511001FD226 /* Rocketwildness-7BB8R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rocketwildness-7BB8R.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				55469116272E88C0000D8C0C /* ContentView.swift */,
 				5546912C272E8BF0000D8C0C /* CastList.swift */,
 				5546912B272E8BF0000D8C0C /* CastRow.swift */,
+				55742493273900EA00A487E3 /* CastDetail.swift */,
 				55469135272E9D80000D8C0C /* ActorDetail.swift */,
 				55469125272E8BD5000D8C0C /* Actor.swift */,
 				55469128272E8BE1000D8C0C /* DUNEApp.swift */,
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55469117272E88C0000D8C0C /* ContentView.swift in Sources */,
+				55742494273900EA00A487E3 /* CastDetail.swift in Sources */,
 				5546912E272E8BF0000D8C0C /* CastList.swift in Sources */,
 				55469126272E8BD5000D8C0C /* Actor.swift in Sources */,
 				55469136272E9D80000D8C0C /* ActorDetail.swift in Sources */,
