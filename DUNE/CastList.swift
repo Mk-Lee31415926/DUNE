@@ -237,6 +237,7 @@ struct CastList: View{
     var body: some View{
         NavigationView {
             ZStack {
+
                 List{
                     ScrollView(.horizontal) {
                         LazyHStack(spacing:20){
@@ -320,7 +321,7 @@ struct CastList: View{
 struct CastList_previews: PreviewProvider{
     static var previews: some View{
         CastList()
-            .preferredColorScheme(.dark)
+            
     }
 }
 
@@ -328,9 +329,8 @@ struct SectionTextView: View {
     let section: String
     var body: some View {
         Text(section)
-            .font(.custom("ROCKETWILDNESS",size: 40))
+            .font(.custom("ROCKETWILDNESS",size: 30))
             .foregroundColor(Color("ConceptColor01"))
-            .background(LinearGradient(gradient: Gradient(colors: [Color("ConceptColor03"), Color.white]), startPoint: /*@START_MENU_TOKEN@*/.topLeading/*@END_MENU_TOKEN@*/, endPoint: .bottomTrailing))
             .padding(.trailing, 11.0)
     }
 }

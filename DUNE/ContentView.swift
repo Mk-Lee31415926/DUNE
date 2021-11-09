@@ -8,6 +8,8 @@ import AVKit
 import SwiftUI
 
 struct ContentView: View {
+    let pics = [
+        "Arrakis","ArtConcept" ,"ArtWork" ,"Atreides" ,"AtreidesMark" ,"Chani&Paul" ,"chani" ,"DUNE" ,"DUNEArt" ,"Harkonnen" ,"Illustartions" ,"Jessica", "movie_Jessica" ,"Paul&Jessica" ,"SecretOfDUNE" ,"SketchAlla" ,"SketchChani", "SketchDuncan" ,"SketchFremen" ,"SketchJessica" ,"SketchLeto" ,"SketchMohiam", "SketchPaul","SketchStilgar"]
     let casts = [
         "Paul Atreides","Lady Jessica Atreides","Duke Leto Atreides","Duncan Idaho","Gurney Halleck","Dr. Wellington Yueh","Thufir Hawat","Chani","Stilgar","Dr. Liet Kynes","Baron Vladimir Harkonnen","Beast Rabban Harkonnen","Piter de Vries","Reverend Mother Mohiam"]
     @State private var shoWhich: Int = 0
@@ -17,19 +19,39 @@ struct ContentView: View {
         TabView{
             //Main tab 
             ZStack {
-                //Cover photo 要換
-                Text("TEXT")
-                .font(.custom("ROCKETWILDNESS",size: 30))
+                //Navigationview 會遮蓋所有底圖，背景圖及文字都放不進去
+                Text("DUNE")
+                .foregroundColor(.blue)
+                .font(.custom("ROCKETWILDNESS",size: 100))
                 .fontWeight(.heavy)
-                .background(Image("MainPgCover")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 440, height: .infinity, alignment: .center)
-                                .clipped()
-                )
-
+                .shadow(radius: 20)
+                
+                Image("MainPgCover")
+                .resizable()
+                .scaledToFill()
+                .clipped()
 //                VideoPlayer(player: AVPlayer(url: videoUrl))
-//                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
+//                    .frame(width: 100, height: 100)
+                NavigationView {
+                    ScrollView(.horizontal){
+                        let rows = Array(repeating: GridItem(), count: 2)
+                        LazyHGrid(rows: rows, spacing: 20){
+                            ForEach(pics.indices){ item in
+                                NavigationLink(
+                                    destination:
+                                        Image(pics[item])
+                                        .resizable()
+                                        .scaledToFit()
+                                    ,label: {
+                                        ViewWall(pic_name: pics[item])
+                                    })
+                                    
+                                
+                            }
+                        }
+                            
+                    }
+                }
             }
             .tabItem {
                     Label("Main()",systemImage:"house.circle")
@@ -52,10 +74,10 @@ struct ContentView: View {
             //how to get actors to this page??
             GiveMe(name:casts[shoWhich])
             .onTapGesture {
-                shoWhich = Int.random(in: 0...14)
+                shoWhich = Int.random(in: 0...13)
             }
             .tabItem {
-                Label("Random",systemImage:"dice")
+                Label("Random",systemImage:"circlebadge.2")
             }
         }
         .navigationTitle("Now you're stuck.")
@@ -68,7 +90,7 @@ struct ContentView_Previews: PreviewProvider {
         NavigationView {
             ContentView()
         }
-        .preferredColorScheme(.dark)
+        
     }
 }
 
@@ -88,5 +110,18 @@ struct GiveMe: View {
                 opacity = 1
                 show = true
             }
+    }
+}
+
+struct ViewWall: View {
+    let pic_name: String
+    var body: some View {
+        VStack {
+           Image(pic_name)
+            .resizable()
+            .scaledToFill()
+            .cornerRadius(20)
+            
+        }
     }
 }

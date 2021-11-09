@@ -57,6 +57,7 @@ struct ATextSetView: View {
     let width: CGFloat
     var body: some View {
         Text(who)
+            .foregroundColor(.black)
             .frame(width: width, height: .infinity, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .padding()
             .background(LinearGradient(gradient: Gradient(colors: [Color("ConceptColor03"), Color.white]), startPoint: /*@START_MENU_TOKEN@*/.topLeading/*@END_MENU_TOKEN@*/, endPoint: .bottomTrailing))
