@@ -27,6 +27,7 @@ struct ActorDetail: View{
                             width: 300)
                 //純測試link
                 Link("Read more...", destination: URL(string:"https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E5%95%8F%E9%A1%8C%E8%A7%A3%E7%AD%94%E9%9B%86/swiftui-%E9%BB%9E%E9%81%B8%E6%89%93%E9%96%8B%E9%80%A3%E7%B5%90%E7%9A%84-link-%E6%8C%89%E9%88%95-2b0c382f5468")!)
+                //Link(<#T##title: StringProtocol##StringProtocol#>, destination: <#T##URL#>)
             }
         }
     }

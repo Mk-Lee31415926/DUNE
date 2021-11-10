@@ -17,42 +17,44 @@ struct ContentView: View {
     //let videoUrl = URL(fileURLWithPath: Bundle.main.path(forResource: "mainPgMotion", ofType: "mp4")!)
     var body: some View {
         TabView{
-            //Main tab 
-            ZStack {
+            //Main tab
                 //Navigationview 會遮蓋所有底圖，背景圖及文字都放不進去
-                Text("DUNE")
-                .foregroundColor(.blue)
-                .font(.custom("ROCKETWILDNESS",size: 100))
-                .fontWeight(.heavy)
-                .shadow(radius: 20)
                 
-                Image("MainPgCover")
-                .resizable()
-                .scaledToFill()
-                .clipped()
-//                VideoPlayer(player: AVPlayer(url: videoUrl))
-//                    .frame(width: 100, height: 100)
                 NavigationView {
-                    ScrollView(.horizontal){
-                        let rows = Array(repeating: GridItem(), count: 2)
-                        LazyHGrid(rows: rows, spacing: 20){
-                            ForEach(pics.indices){ item in
-                                NavigationLink(
-                                    destination:
-                                        Image(pics[item])
-                                        .resizable()
-                                        .scaledToFit()
-                                    ,label: {
-                                        ViewWall(pic_name: pics[item])
-                                    })
+                    //NavigationView是真整顯示的區塊，所以應該將背景放這
+                    ZStack {
+                        
+                        Image("MainPgCover")
+                        .resizable()
+                        .scaledToFit()
+                        .ignoresSafeArea()
+                        Text("DUNE")
+                        .foregroundColor(.blue)
+                        .font(.custom("ROCKETWILDNESS",size: 100))
+                        .fontWeight(.heavy)
+                        .shadow(radius: 20)
+    //                  VideoPlayer(player: AVPlayer(url: videoUrl))
+    //                      .frame(width: 100, height: 100)
+                        ScrollView(.horizontal){
+                            let rows = Array(repeating: GridItem(), count: 2)
+                            LazyHGrid(rows: rows, spacing: 20){
+                                ForEach(pics.indices){ item in
+                                    NavigationLink(
+                                        destination:
+                                            Image(pics[item])
+                                            .resizable()
+                                            .scaledToFit()
+                                        ,label: {
+                                            ViewWall(pic_name: pics[item])
+                                        })
+                                        
                                     
-                                
+                                }
                             }
+                                
                         }
-                            
                     }
                 }
-            }
             .tabItem {
                     Label("Main()",systemImage:"house.circle")
             }
