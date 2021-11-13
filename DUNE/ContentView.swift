@@ -13,6 +13,9 @@ struct ContentView: View {
     let casts = [
         "Paul Atreides","Lady Jessica Atreides","Duke Leto Atreides","Duncan Idaho","Gurney Halleck","Dr. Wellington Yueh","Thufir Hawat","Chani","Stilgar","Dr. Liet Kynes","Baron Vladimir Harkonnen","Beast Rabban Harkonnen","Piter de Vries","Reverend Mother Mohiam"]
     @State private var shoWhich: Int = 0
+    @State private var drawCast: Int = 0
+    //private means only inside struct can it be used
+    
     //引入mp4檔會導致preview掛掉
     //let videoUrl = URL(fileURLWithPath: Bundle.main.path(forResource: "mainPgMotion", ofType: "mp4")!)
     var body: some View {
@@ -70,16 +73,35 @@ struct ContentView: View {
                     Label("Top cast",systemImage:"person.crop.rectangle")
             }
             
-            //2nd Tab
-            //which role do you play in this world?
+            //Exercise button and random and @State property
+            VStack {
+                //use drawCast as variable
+                GiveMe(name: casts[drawCast])
+                Button {
+                    drawCast = Int.random(in: 0...13)
+                } label: {
+                    Label("Which DUNE chararcter are u ? ", systemImage: "circle")
+                        .font(.title3)
+                        .foregroundColor(.white)
+                        .padding()
+                }
+                .background(Color.black)
+                .cornerRadius(20)
+                //.clipShape(Capsule())
+                //.buttonStyle(.bordered) This is new ver. coding lang...
+            }
+            .tabItem {
+                Label("ButtonTest",systemImage:"scribble.variable")
+            }
+            
             //character random
-            //how to get actors to this page??
+            //how to get actors data to this page??
             GiveMe(name:casts[shoWhich])
             .onTapGesture {
                 shoWhich = Int.random(in: 0...13)
             }
             .tabItem {
-                Label("Random",systemImage:"circlebadge.2")
+                Label("Pending.",systemImage:"circlebadge.2")
             }
         }
         .navigationTitle("Now you're stuck.")
@@ -106,6 +128,8 @@ struct GiveMe: View {
             .resizable()
             .scaledToFill()
             .frame(width:300,height:400)
+            .cornerRadius(10)
+            .shadow(color: .gray, radius: 10)
             .transition(.opacity)
             .animation(.easeInOut(duration: 4),value: show)
             .onAppear{
