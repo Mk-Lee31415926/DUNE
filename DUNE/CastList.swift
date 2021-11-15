@@ -280,6 +280,7 @@ struct CastList: View{
                             //I want to call each tab detail respectively here,
                             //not click on entire row
                             CastRow(actor: actor)
+                                //.buttonStyle(.plain)
                         }
                     }
                     Section(header: SectionTextView(section: "House Harkonnen")) {
@@ -287,6 +288,7 @@ struct CastList: View{
                             //I want to call each tab detail respectively here,
                             //not click on entire row
                             CastRow(actor: actor)
+                                //.buttonStyle(.plain)
                         }
                     }
                     Section(header: SectionTextView(section: "Fremens")) {
@@ -294,6 +296,7 @@ struct CastList: View{
                             //I want to call each tab detail respectively here,
                             //not click on entire row
                            CastRow(actor: actor)
+                            //.buttonStyle(.plain)
                         }
                     }
                     Section(header: SectionTextView(section:"Bene Gesserit")) {
@@ -301,6 +304,7 @@ struct CastList: View{
                             //I want to call each tab detail respectively here,
                             //not click on entire row
                             CastRow(actor: actor)
+                                //.buttonStyle(.plain)
                         }
                     }
                 }

@@ -12,39 +12,30 @@ struct CastRow: View{
     var actor : Actor
     var body: some View{
             VStack(spacing: 0.0) {
-                NavigationLink(
-                    destination: CastDetail(actor: actor),
-                    label: {
-                        Image(actor.cast_name)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 200, height: 200)
-                            .cornerRadius(10)
-                            .shadow(color: Color.gray, radius: 15)
-                            .padding()
-                            .clipped()
-                    })
-                    
-                NavigationLink(
-                    destination: ActorDetail(actor: actor),
-                    label: {
-                        //Actor(tress) name
-                        Text(actor.name)
-                            .font(.title3)
-                            .fontWeight(.bold)
-                            .foregroundColor(.black)
-                            .multilineTextAlignment(.leading)
-                    })
-                NavigationLink(
-                    destination: CastDetail(actor: actor),
-                    label: {
-                        // cast name in DUNE
-                        Text("as  " + actor.cast_name)
-                            .font(.body)
-                            .fontWeight(.regular)
-                            .foregroundColor(Color("ConceptColor02"))
-                            .multilineTextAlignment(.trailing)
-                    })
+                
+                //Cast picture
+                Image(actor.cast_name)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 200, height: 200)
+                    .cornerRadius(10)
+                    .shadow(color: Color.gray, radius: 15)
+                    .padding()
+                    .clipped()
+        
+                //Actor(tress) name
+                Text(actor.name)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+        
+                // cast name in DUNE
+                Text("as  " + actor.cast_name)
+                    .font(.body)
+                    .fontWeight(.regular)
+                    .foregroundColor(Color("ConceptColor02"))
+                    .multilineTextAlignment(.center)
             }
             .padding()
             //.clipshape(Circle()) 沒辦法使用圓角
