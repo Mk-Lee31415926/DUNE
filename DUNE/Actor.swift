@@ -27,7 +27,7 @@ extension Actor {
         cast_bio: """
         The protagonist of Dune. Paul is the son of Duke Leto Atreides and is the heir to the House of the Atreides. At the beginning of the novel, Paul is fifteen years old. He has been trained from birth to fulfill the role of duke, and he is adept at combat and strategic thinking. Paul is also a quiet, thoughtful, and observant young man. Paul is not overly tall or muscular, but he is strong and quick. Among the Fremen, Paul has two names: Usul, which signifies strength, and Muad’Dib, the name of the desert mouse on Arrakis.
         """,
-        actor_link: " "
+        actor_link: "https://developer.apple.com/documentation/swiftui/link"
         
     )
 }

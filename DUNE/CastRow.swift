@@ -11,35 +11,46 @@ import SwiftUI
 struct CastRow: View{
     var actor : Actor
     var body: some View{
-            VStack(spacing: 0.0) {
-                
-                //Cast picture
-                Image(actor.cast_name)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 200, height: 200)
-                    .cornerRadius(10)
-                    .shadow(color: Color.gray, radius: 15)
-                    .padding()
-                    .clipped()
-        
-                //Actor(tress) name
-                Text(actor.name)
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                    .multilineTextAlignment(.center)
-        
-                // cast name in DUNE
-                Text("as  " + actor.cast_name)
-                    .font(.body)
-                    .fontWeight(.regular)
-                    .foregroundColor(Color("ConceptColor02"))
-                    .multilineTextAlignment(.center)
-            }
-            .padding()
-            //.clipshape(Circle()) 沒辦法使用圓角
-            .background(LinearGradient(gradient: Gradient(colors: [Color("ConceptColor05"), Color.white]), startPoint: .top, endPoint: .bottomTrailing))
+        HStack {
+            VStack {
+                    //Cast picture
+                    Image(actor.cast_name)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 200, height: 200)
+                        .cornerRadius(10)
+                        .shadow(color: Color.gray, radius: 15)
+                        .padding()
+                        .clipped()
+            
+                    //Actor(tress) name 連接ActorDetail
+                    Button{
+                        print(actor.name)
+                    }label: {
+                        Text(actor.name)
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
+                            .multilineTextAlignment(.center)
+                    }
+            
+                    // cast name in DUNE 連結CastDetail
+                    Button{
+                        print(actor.cast_name)
+                    }label: {
+                        Text("as  " + actor.cast_name)
+                            .font(.body)
+                            .fontWeight(.regular)
+                            .foregroundColor(Color("ConceptColor02"))
+                            .multilineTextAlignment(.center)
+                    } 
+                }
+                //.buttonStyle(.plain)
+                .padding()
+                //.clipshape(Circle()) 圓角沒辦法作用在STack上
+            Spacer()
+        }
+        .background(LinearGradient(gradient: Gradient(colors: [Color("ConceptColor05"), Color.white]), startPoint: .top, endPoint: .bottomTrailing))
         //why isn't it working?
         //A: cornerRadius cant act on Stack
         //->Add blank Image under and adjust

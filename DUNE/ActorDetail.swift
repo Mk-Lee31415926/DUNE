@@ -17,7 +17,7 @@ struct ActorDetail: View{
         //actor page
         ScrollView {
             VStack {
-                Text("Actor Bio")
+                TitleSetView(typein:"Actor Bio")
                 //TitleSetView(typein: "Actor Bio")
                 //actor pic
                 AImageSetView(who: actor.name,
@@ -26,9 +26,9 @@ struct ActorDetail: View{
                 ATextSetView(who: actor.actor_bio,
                             width: 300)
                 //純測試link
-                Link("Read more on Imdb...", destination: URL(string: actor.actor_link)!)
-                //this page does not know actor_link , so what's the solution?
-                //Link(<#T##title: StringProtocol##StringProtocol#>, destination: <#T##URL#>)
+                
+                //let Imdbhref: String = actor.actor_link
+                Link("Read more on Imdb...", destination: URL(string: "\(actor.actor_link)")!)
             }
         }
     }
@@ -62,7 +62,7 @@ struct ATextSetView: View {
             .foregroundColor(.black)
             .frame(width: width, height: .infinity, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .padding()
-            .background(LinearGradient(gradient: Gradient(colors: [Color("ConceptColor03"), Color.white]), startPoint: /*@START_MENU_TOKEN@*/.topLeading/*@END_MENU_TOKEN@*/, endPoint: .bottomTrailing))
+            .background(LinearGradient(gradient: Gradient(colors: [Color("ConceptColor03"), Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .cornerRadius(30)
             
     }
@@ -70,11 +70,10 @@ struct ATextSetView: View {
 
 
 //weird, this part cause bug. ??
-//struct TitleSetView: View {
-//    let typein: String
-//    var body: some View {
-//        Text(typein)
-//            //.font(.custom("ROCKETWILDNESS",size: 30))
-////            .background(LinearGradient(gradient: Gradient(colors: [Color.orange, Color.white]), startPoint: /*@START_MENU_TOKEN@*/.topLeading/*@END_MENU_TOKEN@*/, endPoint: .bottomTrailing))
-//    }
-//}
+struct TitleSetView: View {
+    let typein: String
+    var body: some View {
+        Text(typein)
+            .font(.custom("ROCKETWILDNESS",size: 30))
+    }
+}

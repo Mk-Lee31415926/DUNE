@@ -24,6 +24,7 @@ struct CastDetail: View{
                 //actor bio
                 CTextSetView(who: actor.cast_bio,
                             width: 300)
+                Link("Check out HERE for more detailed intro ...", destination: URL(string: "https://nerdist.com/article/dune-every-character-glossary/")!)
             }
         }
     }
@@ -61,6 +62,5 @@ struct CTextSetView: View {
             .padding()
             .background(LinearGradient(gradient: Gradient(colors: [Color("ConceptColor03"), Color.white]), startPoint: /*@START_MENU_TOKEN@*/.topLeading/*@END_MENU_TOKEN@*/, endPoint: .bottomTrailing))
             .cornerRadius(30)
-            
     }
 }

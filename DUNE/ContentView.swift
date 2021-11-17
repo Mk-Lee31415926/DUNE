@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     let pics = [
-        "Arrakis","ArtConcept" ,"ArtWork" ,"Atreides" ,"AtreidesMark" ,"Chani&Paul" ,"chani" ,"DUNE" ,"DUNEArt" ,"Harkonnen" ,"Illustartions" ,"Jessica", "movie_Jessica" ,"Paul&Jessica" ,"SecretOfDUNE" ,"SketchAlla" ,"SketchChani", "SketchDuncan" ,"SketchFremen" ,"SketchJessica" ,"SketchLeto" ,"SketchMohiam", "SketchPaul","SketchStilgar"]
+        "Arrakis","ArtConcept" ,"ArtWork" ,"Atreides" ,"AtreidesMark" ,"Chani_Paul" ,"chani" ,"DUNE" ,"DUNEArt" ,"Harkonnen" ,"Illustartions" ,"Jessica", "movie_Jessica" ,"Paul_Jessica" ,"SecretOfDUNE" ,"SketchAlla" ,"SketchChani", "SketchDuncan" ,"SketchFremen" ,"SketchJessica" ,"SketchLeto" ,"SketchMohiam", "SketchPaul","SketchStilgar"]
     let casts = [
         "Paul Atreides","Lady Jessica Atreides","Duke Leto Atreides","Duncan Idaho","Gurney Halleck","Dr. Wellington Yueh","Thufir Hawat","Chani","Stilgar","Dr. Liet Kynes","Baron Vladimir Harkonnen","Beast Rabban Harkonnen","Piter de Vries","Reverend Mother Mohiam"]
     @State private var shoWhich: Int = 0
@@ -145,7 +145,7 @@ struct ViewWall: View {
         VStack {
            Image(pic_name)
             .resizable()
-            .scaledToFill()
+            .scaledToFit()
             .cornerRadius(20)
             
         }
