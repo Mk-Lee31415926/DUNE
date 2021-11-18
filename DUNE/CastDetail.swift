@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 struct CastDetail: View{
     //design as option, to output cast or actor detail
-    //can it be reused?
+    //can it be reused?  
     //let callDetail: String
     let actor: Actor
     

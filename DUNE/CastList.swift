@@ -234,6 +234,10 @@ struct CastList: View{
               actor_link: "https://www.imdb.com/name/nm0272581/?ref_=tt_cl_t_2"
         )
     ]
+    
+    @State private var selectCast: String?
+    @State private var selectActor: String?
+    
     var body: some View{
         NavigationView {
             ZStack {
@@ -277,30 +281,30 @@ struct CastList: View{
                     }
                     Section(header: SectionTextView(section: "House Atreides")){
                         ForEach(Atreides){ actor in
-                            //I want to call each tab detail respectively here,
-                            //not click on entire row
-                            CastRow(actor: actor)
+                            
+                            CastRow(actor: actor, selectCast: $selectCast, selectActor: $selectActor)
+                                
+                            NavigationLink(
+                                destination: CastDetail(actor: actor),
+                                label: {
+                                    EmptyView()
+                                })
+                                .opacity(0)
                         }
                     }
                     Section(header: SectionTextView(section: "House Harkonnen")) {
                         ForEach(Harkonnen){ actor in
-                            //I want to call each tab detail respectively here,
-                            //not click on entire row
-                            CastRow(actor: actor)
+                           //
                         }
                     }
                     Section(header: SectionTextView(section: "Fremens")) {
                         ForEach(Fremens){ actor in
-                            //I want to call each tab detail respectively here,
-                            //not click on entire row
-                           CastRow(actor: actor)
+                            //
                         }
                     }
                     Section(header: SectionTextView(section:"Bene Gesserit")) {
                         ForEach(Bene_Gesserit){ actor in
-                            //I want to call each tab detail respectively here,
-                            //not click on entire row
-                            CastRow(actor: actor)
+                            //
                         }
                     }
                 }

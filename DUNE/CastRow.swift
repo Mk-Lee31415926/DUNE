@@ -10,6 +10,8 @@ import SwiftUI
 
 struct CastRow: View{
     var actor : Actor
+    @Binding var selectCast: String?
+    @Binding var selectActor: String?
     var body: some View{
         HStack {
             VStack {
@@ -26,6 +28,7 @@ struct CastRow: View{
                     //Actor(tress) name 連接ActorDetail
                     Button{
                         print(actor.name)
+                        selectActor = actor.name
                     }label: {
                         Text(actor.name)
                             .font(.title3)
@@ -37,6 +40,7 @@ struct CastRow: View{
                     // cast name in DUNE 連結CastDetail
                     Button{
                         print(actor.cast_name)
+                        selectCast = actor.cast_name
                     }label: {
                         Text("as  " + actor.cast_name)
                             .font(.body)
@@ -59,9 +63,3 @@ struct CastRow: View{
     }
 }
 
-struct CastRow_Previews: PreviewProvider{
-    static var previews: some View{
-        CastRow(actor: .testRow)
-            .preferredColorScheme(.dark)
-    }
-}
