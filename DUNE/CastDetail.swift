@@ -9,14 +9,16 @@ import Foundation
 import SwiftUI
 struct CastDetail: View{
     //design as option, to output cast or actor detail
-    //can it be reused?  
-    //let callDetail: String
+    //can it be reused?
     let actor: Actor
     
     var body: some View{
         ScrollView {
             VStack {
-                Text("Cast Intro")
+                Text("Cast intro")
+                    .font(.custom("ROCKETWILDNESS",size: 30))
+                Text(actor.cast_name)
+                    .font(.title2)
                 //TitleSetView(typein: "Cast Intro")
                 //actor pic
                 CImageSetView(who: actor.cast_name,

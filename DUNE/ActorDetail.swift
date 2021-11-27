@@ -18,7 +18,8 @@ struct ActorDetail: View{
         ScrollView {
             VStack {
                 TitleSetView(typein:"Actor Bio")
-                //TitleSetView(typein: "Actor Bio")
+                Text(actor.name)
+                    .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                 //actor pic
                 AImageSetView(who: actor.name,
                              width: 300)

@@ -26,28 +26,26 @@ struct CastRow: View{
                         .clipped()
             
                     //Actor(tress) name 連接ActorDetail
-                    Button{
-                        print(actor.name)
-                        selectActor = actor.name
-                    }label: {
-                        Text(actor.name)
-                            .font(.title3)
-                            .fontWeight(.bold)
-                            .foregroundColor(.black)
-                            .multilineTextAlignment(.center)
-                    }
-            
+                    NavigationLink(
+                        destination: ActorDetail(actor: actor),
+                        label: {
+                            Text(actor.name)
+                                .font(.title3)
+                                .fontWeight(.bold)
+                                .foregroundColor(.black)
+                                .multilineTextAlignment(.center)
+                        })
                     // cast name in DUNE 連結CastDetail
-                    Button{
-                        print(actor.cast_name)
-                        //selectCast = actor.cast_name
-                    }label: {
-                        Text("as  " + actor.cast_name)
-                            .font(.body)
-                            .fontWeight(.regular)
-                            .foregroundColor(Color("ConceptColor02"))
-                            .multilineTextAlignment(.center)
-                    } 
+                    NavigationLink(
+                        destination: CastDetail(actor: actor),
+                        label: {
+                            Text("as  " + actor.cast_name)
+                                .font(.body)
+                                .fontWeight(.regular)
+                                .foregroundColor(Color("ConceptColor02"))
+                                .multilineTextAlignment(.center)
+                        })
+                        
                 }
                 //.buttonStyle(.plain)
                 .padding()
@@ -62,4 +60,9 @@ struct CastRow: View{
         //Solve:Spacer should follow Stack component
     }
 }
-
+//加了偵測點選值的binding資料好像就無法preview了＝＝
+struct CastRow_Previews: PreviewProvider{
+    static var previews: some View{
+        CastRow(actor: .testRow, selectActor: .constant("Timothée Chalamet"))
+    }
+}

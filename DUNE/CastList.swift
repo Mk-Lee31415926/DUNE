@@ -279,31 +279,28 @@ struct CastList: View{
                     }
                     Section(header: SectionTextView(section: "House Atreides")){
                         ForEach(Atreides){ actor in
-                            
-                            CastRow(actor: actor, selectActor: $selectActor)
-                            //第一層透明是讓點擊任意區塊能連結cast介紹
-                            //點擊演員名button會連結到Actor介紹
-                            //點擊角色名button會連結到Cast介紹
-                            
+                                CastRow(actor: actor, selectActor: $selectActor)
+                                //第一層透明是讓點擊任意區塊能連結cast介紹&藏起箭頭
+                                //這層EmptyView加上去變成下層的一切都無法點選到
                         }
                     }
-                    /*
                     Section(header: SectionTextView(section: "House Harkonnen")) {
                         ForEach(Harkonnen){ actor in
+                            CastRow(actor: actor, selectActor: $selectActor)
                            //
-                        }
-                    }
+                        }}
                     Section(header: SectionTextView(section: "Fremens")) {
                         ForEach(Fremens){ actor in
+                            CastRow(actor: actor, selectActor: $selectActor)
                             //
                         }
                     }
                     Section(header: SectionTextView(section:"Bene Gesserit")) {
                         ForEach(Bene_Gesserit){ actor in
+                            CastRow(actor: actor, selectActor: $selectActor)
                             //
                         }
                     }
-                     */
                 }
             }
             .navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
