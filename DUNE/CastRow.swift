@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CastRow: View{
     var actor : Actor
-    @Binding var selectCast: String?
+    //@Binding var selectCast: String?
     @Binding var selectActor: String?
     var body: some View{
         HStack {
@@ -40,7 +40,7 @@ struct CastRow: View{
                     // cast name in DUNE 連結CastDetail
                     Button{
                         print(actor.cast_name)
-                        selectCast = actor.cast_name
+                        //selectCast = actor.cast_name
                     }label: {
                         Text("as  " + actor.cast_name)
                             .font(.body)

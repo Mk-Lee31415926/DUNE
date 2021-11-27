@@ -235,13 +235,11 @@ struct CastList: View{
         )
     ]
     
-    @State private var selectCast: String?
     @State private var selectActor: String?
     
     var body: some View{
         NavigationView {
             ZStack {
-
                 List{
                     ScrollView(.horizontal) {
                         LazyHStack(spacing:20){
@@ -282,16 +280,14 @@ struct CastList: View{
                     Section(header: SectionTextView(section: "House Atreides")){
                         ForEach(Atreides){ actor in
                             
-                            CastRow(actor: actor, selectCast: $selectCast, selectActor: $selectActor)
-                                
-                            NavigationLink(
-                                destination: CastDetail(actor: actor),
-                                label: {
-                                    EmptyView()
-                                })
-                                .opacity(0)
+                            CastRow(actor: actor, selectActor: $selectActor)
+                            //第一層透明是讓點擊任意區塊能連結cast介紹
+                            //點擊演員名button會連結到Actor介紹
+                            //點擊角色名button會連結到Cast介紹
+                            
                         }
                     }
+                    /*
                     Section(header: SectionTextView(section: "House Harkonnen")) {
                         ForEach(Harkonnen){ actor in
                            //
@@ -307,6 +303,7 @@ struct CastList: View{
                             //
                         }
                     }
+                     */
                 }
             }
             .navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
@@ -322,7 +319,6 @@ struct CastList: View{
 struct CastList_previews: PreviewProvider{
     static var previews: some View{
         CastList()
-            
     }
 }
 
