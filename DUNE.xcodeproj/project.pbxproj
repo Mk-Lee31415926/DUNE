@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552F0A4127520AB400E2BBC0 /* AnimeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552F0A4027520AB400E2BBC0 /* AnimeModifier.swift */; };
 		55469117272E88C0000D8C0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55469116272E88C0000D8C0C /* ContentView.swift */; };
 		55469119272E88CB000D8C0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55469118272E88CB000D8C0C /* Assets.xcassets */; };
 		5546911C272E88CB000D8C0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5546911B272E88CB000D8C0C /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		552F0A4027520AB400E2BBC0 /* AnimeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeModifier.swift; sourceTree = "<group>"; };
 		55469111272E88C0000D8C0C /* DUNE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DUNE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55469116272E88C0000D8C0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		55469118272E88CB000D8C0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		55469113272E88C0000D8C0C /* DUNE */ = {
 			isa = PBXGroup;
 			children = (
+				552F0A4027520AB400E2BBC0 /* AnimeModifier.swift */,
 				55469130272E8C06000D8C0C /* IntroView.swift */,
 				55469116272E88C0000D8C0C /* ContentView.swift */,
 				5546912C272E8BF0000D8C0C /* CastList.swift */,
@@ -167,6 +170,7 @@
 				55469136272E9D80000D8C0C /* ActorDetail.swift in Sources */,
 				55469129272E8BE1000D8C0C /* DUNEApp.swift in Sources */,
 				5546912D272E8BF0000D8C0C /* CastRow.swift in Sources */,
+				552F0A4127520AB400E2BBC0 /* AnimeModifier.swift in Sources */,
 				55469131272E8C06000D8C0C /* IntroView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

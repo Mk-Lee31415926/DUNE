@@ -12,6 +12,9 @@ struct CastRow: View{
     var actor : Actor
     //@Binding var selectCast: String?
     @Binding var selectActor: String?
+    
+    @Binding var opacity: Double
+    @Binding var offset: Double
     var body: some View{
         HStack {
             VStack {
@@ -24,7 +27,11 @@ struct CastRow: View{
                         .shadow(color: Color.gray, radius: 15)
                         .padding()
                         .clipped()
-            
+                        .opacity(opacity)
+                        .animation(.easeOut(duration:10),value: opacity)
+                        .onAppear{
+                            opacity = 1
+                        }
                     //Actor(tress) name 連接ActorDetail
                     NavigationLink(
                         destination: ActorDetail(actor: actor),
@@ -49,7 +56,7 @@ struct CastRow: View{
                 }
                 //.buttonStyle(.plain)
                 .padding()
-                //.clipshape(Circle()) 圓角沒辦法作用在STack上
+                //.clipshape(Circle()) 圓角不會作用在STack上
             Spacer()
         }
         .background(LinearGradient(gradient: Gradient(colors: [Color("ConceptColor05"), Color.white]), startPoint: .top, endPoint: .bottomTrailing))
@@ -63,6 +70,6 @@ struct CastRow: View{
 //加了偵測點選值的binding資料好像就無法preview了＝＝
 struct CastRow_Previews: PreviewProvider{
     static var previews: some View{
-        CastRow(actor: .testRow, selectActor: .constant("Timothée Chalamet"))
+        CastRow(actor: .testRow, selectActor: .constant("Timothée Chalamet"),opacity:.constant(1),offset:.constant(1))
     }
 }

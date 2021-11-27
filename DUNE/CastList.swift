@@ -28,30 +28,6 @@ struct CastList: View{
               """,
               actor_link:"https://www.imdb.com/name/nm3154303/?ref_=tt_cl_t_1"
         ),
-        Actor(name: "Rebecca Ferguson", cast_name: "Lady Jessica Atreides",
-              actor_bio: """
-              Rebecca Ferguson was born Rebecca Louisa Ferguson Sundström in Stockholm, Sweden, and grew up in its Vasastaden district. Her father is Swedish. Her mother, Rosemary Ferguson, is British, of Scottish and Northern Irish descent, and moved to Sweden at the age of 25. Rebecca attended an English-speaking school in Sweden and was raised bilingual, speaking Swedish and English. As a student, she attended the Adolf Fredrik's Music School in Stockholm and graduated in 1999.
-
-              She came into prominence with her breakout role of upper-class girl Anna Gripenhielm in the soap-opera Nya tider (1999), when she was 16 years old.
-
-              She lives in the seaside town of Simrishamn, on the Swedish south coast. Ferguson has said she wanted to get away from city life and the public spotlight following her soap opera success. Swedish director Richard Hobert, spotted her at the town market in 2011, which led to her starring in his film En enkel till Antibes (2011).
-
-              Ferguson taught Argentinian Tango at a dance company in Sweden for a few years.
-
-              In 2013, Rebecca played Queen Elizabeth Woodville in the BBC historical drama 白皇后 (2013), for which she got a Golden Globe nomination.
-
-              In 2015, Ferguson played Ilsa Faust, the female lead in 不可能的任務：失控國度 (2015). Her co-star, Tom Cruise, chose her for the film after having seen her in the mini-series 白皇后 (2013). Her performance in the movie was highly praised and Rebecca will reprise her role in the sixth Mission: Impossible film.
-
-              In 2016, she starred in Despite the Falling Snow (2016), 走音天后 (2016) and 列車上的女孩 (2016).
-
-              Her upcoming projects are 異星智慧 (2017), 雪人 (2017), 大娛樂家 (2017), The Lady and the Panda and 不可能的任務：全面瓦解 (2018).
-              - IMDb Mini Biography By: Polly_Kat
-      """,
-              cast_bio: """
-              Paul’s mother. Jessica is the concubine of Duke Leto Atreides. Though she acts like a wife to Leto and he has no other concubines, she is not married to Leto. Jessica is a member of the Bene Gesserit, a school that teaches and practices what many others think of as witchcraft. An orphan who never knew her parents, Jessica is tall and slender, with bronze-colored hair and green eyes.
-              """,
-              actor_link: "https://www.imdb.com/name/nm0272581/?ref_=tt_cl_t_2"
-        ),
         Actor(name: "Oscar Isaac", cast_name: "Duke Leto Atreides",
               actor_bio: """
               Oscar Isaac was born Óscar Isaac Hernández Estrada in Guatemala, to a Guatemalan mother, María Eugenia, and a Cuban father, Oscar Gonzalo Hernández-Cano, a pulmonologist. Oscar was raised in Miami, Florida. Before he became an actor, he played lead guitar and sang vocals in his band the Blinking Underdogs. He graduated from the Juilliard School in 2005.
@@ -237,6 +213,8 @@ struct CastList: View{
     
     @State private var selectActor: String?
     
+    @State private var opacity: Double = 0
+    @State private var offset: Double = 0
     var body: some View{
         NavigationView {
             ZStack {
@@ -247,7 +225,7 @@ struct CastList: View{
                                 NavigationLink(
                                     destination: CastDetail(actor: actor),
                                     label: {
-                                        LittleCastView(actor: actor)
+                                        LittleCastView(actor: actor,opacity: $opacity.animation())
                                     }
                                 )
                             }
@@ -255,7 +233,7 @@ struct CastList: View{
                                 NavigationLink(
                                     destination: CastDetail(actor: actor),
                                     label: {
-                                        LittleCastView(actor: actor)
+                                        LittleCastView(actor: actor,opacity: $opacity.animation())
                                     }
                                 )
                             }
@@ -263,7 +241,7 @@ struct CastList: View{
                                 NavigationLink(
                                     destination: CastDetail(actor: actor),
                                     label: {
-                                        LittleCastView(actor: actor)
+                                        LittleCastView(actor: actor,opacity: $opacity.animation())
                                     }
                                 )
                             }
@@ -271,7 +249,7 @@ struct CastList: View{
                                 NavigationLink(
                                     destination: CastDetail(actor: actor),
                                     label: {
-                                        LittleCastView(actor: actor)
+                                        LittleCastView(actor: actor,opacity: $opacity.animation())
                                     }
                                 )
                             }
@@ -279,36 +257,36 @@ struct CastList: View{
                     }
                     Section(header: SectionTextView(section: "House Atreides")){
                         ForEach(Atreides){ actor in
-                                CastRow(actor: actor, selectActor: $selectActor)
-                                //第一層透明是讓點擊任意區塊能連結cast介紹&藏起箭頭
-                                //這層EmptyView加上去變成下層的一切都無法點選到
+                            CastRow(actor: actor, selectActor: $selectActor,opacity:$opacity.animation(),offset:$offset.animation())
+                            //第一層透明是讓點擊任意區塊能連結cast介紹&藏起箭頭
+                            //這層EmptyView加上去變成下層的一切都無法點選到
                         }
                     }
                     Section(header: SectionTextView(section: "House Harkonnen")) {
                         ForEach(Harkonnen){ actor in
-                            CastRow(actor: actor, selectActor: $selectActor)
-                           //
+                            CastRow(actor: actor, selectActor: $selectActor,opacity:$opacity.animation(),offset:$offset.animation())
+                            //
                         }}
                     Section(header: SectionTextView(section: "Fremens")) {
                         ForEach(Fremens){ actor in
-                            CastRow(actor: actor, selectActor: $selectActor)
+                            CastRow(actor: actor, selectActor: $selectActor,opacity:$opacity.animation(),offset:$offset.animation())
                             //
                         }
                     }
                     Section(header: SectionTextView(section:"Bene Gesserit")) {
                         ForEach(Bene_Gesserit){ actor in
-                            CastRow(actor: actor, selectActor: $selectActor)
+                            CastRow(actor: actor, selectActor: $selectActor,opacity:$opacity.animation(),offset:$offset.animation())
                             //
                         }
                     }
                 }
             }
-            .navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar{
                 ToolbarItem(placement: .principal){
                     Text("Top Cast").font(.headline)
-                    }
                 }
+            }
         }
     }
 }
@@ -331,6 +309,7 @@ struct SectionTextView: View {
 
 struct LittleCastView: View {
     let actor: Actor
+    @Binding var opacity: Double
     var body: some View {
         Image(actor.cast_name)
             .resizable()
@@ -339,5 +318,10 @@ struct LittleCastView: View {
             .frame(width:100,height:100)
             .padding()
             .shadow(color: Color("ConceptColor02"), radius: 15, x: 10, y: 10)
+            .opacity(opacity)
+            .animation(.easeOut(duration:5),value: opacity)
+            .onAppear{
+                opacity = 1
+            }
     }
 }

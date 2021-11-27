@@ -33,7 +33,10 @@ struct CastDetail: View{
 }
 struct CastDetail_Previews: PreviewProvider{
     static var previews: some View{
-        CastDetail(actor: .testRow)
+        Group {
+            CastDetail(actor: .testRow)
+            CastDetail(actor: .testRow)
+        }
             
             
     }
@@ -47,7 +50,7 @@ struct CImageSetView: View {
         Image(who)
             .resizable()
             .scaledToFit()
-            .frame(width: width, height: .infinity, alignment: .center)
+            .frame(width: width, height: 500)
             .cornerRadius(30)
             .shadow(color: Color("ConceptColor02"),radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
             .padding()
@@ -60,7 +63,7 @@ struct CTextSetView: View {
     var body: some View {
         Text(who)
             .foregroundColor(.black)
-            .frame(width: width, height: .infinity, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .frame(width: width, height: 400)
             .padding()
             .background(LinearGradient(gradient: Gradient(colors: [Color("ConceptColor03"), Color.white]), startPoint: /*@START_MENU_TOKEN@*/.topLeading/*@END_MENU_TOKEN@*/, endPoint: .bottomTrailing))
             .cornerRadius(30)

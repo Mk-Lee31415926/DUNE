@@ -93,16 +93,6 @@ struct ContentView: View {
             .tabItem {
                 Label("ButtonTest",systemImage:"scribble.variable")
             }
-            
-            //character random
-            //how to get actors data to this page??
-            GiveMe(name:casts[shoWhich])
-            .onTapGesture {
-                shoWhich = Int.random(in: 0...13)
-            }
-            .tabItem {
-                Label("Pending.",systemImage:"circlebadge.2")
-            }
         }
         .navigationTitle("Now you're stuck.")
         .navigationBarTitleDisplayMode(.inline)
